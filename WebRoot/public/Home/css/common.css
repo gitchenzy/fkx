@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html body{
+    font-family: "Microsoft Yahei" "微软雅黑";
+    font-size: 62.5%;
+    font: inherit;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}

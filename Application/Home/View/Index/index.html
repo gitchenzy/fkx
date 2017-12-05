@@ -1,0 +1,66 @@
+<extend name="Public/main" />
+<block name="css">
+    <link rel="stylesheet" href="/public/Home/css/index.css">
+</block>
+
+<block name="main">
+    <div class="main_visual">
+        <div class="flicking_con">
+            <a >1</a>
+            <a >2</a>
+            <a >3</a>
+
+        </div>
+        <div class="main_image">
+            <ul>
+                <li><span><a href=""><img id="b_{$ak + 1}" src="/public/Home/images/1.jpg"></a></span></li>
+                <li><span><a href=""><img id="b_{$ak + 1}" src="/public/Home/images/2.jpg"></a></span></li>
+                <li><span><a href=""><img id="b_{$ak + 1}" src="/public/Home/images/3.jpeg"></a></span></li>
+            </ul>
+            <a href="javascript:;" id="btn_prev"></a>
+            <a href="javascript:;" id="btn_next"></a>
+
+        </div>
+    </div>
+    <div class="mid-container">
+        <ul>
+            <li>
+                <img src="/public/Home/images/1.jpg" alt="">
+                <a href="">推荐注册分佣</a>
+            </li>
+            <li>
+                <img src="/public/Home/images/1.jpg" alt="">
+                <a href="">我的佣金</a>
+            </li>
+            <li>
+                <img src="/public/Home/images/1.jpg" alt="">
+                <a href="">全部楼盘</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mid-text">
+        <h1>全部楼盘</h1>
+    </div>
+
+    <div style="padding-bottom:50px;">
+        <volist name="info" id="vo">
+            <div class="main-container">
+                <img src="{$vo.pic}" alt="">
+                <div class="main-container-text">
+                    <p>{$vo.title}</p>
+                    <p>均价：<span>{$vo.price}</span>元／m²</p>
+                </div>
+                <div class="main-container-bottom">
+                    <img src="/public/Home/images/local.png" alt="">
+                    <p>{$vo.address}</p>
+                </div>
+            </div>
+        </volist>
+    </div>
+
+</block>
+<block name="js">
+
+    
+</block>
+

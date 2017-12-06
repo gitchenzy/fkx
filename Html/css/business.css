@@ -78,7 +78,7 @@
 .container-text-left h2 {
     font-size: 15px;
     font-weight: normal;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.6);
 }
 .container-text-left p {
     font-size: 12px;
@@ -97,4 +97,47 @@
     display: inline;
     color: #44c3ca;
     font-size: 12px;
+}
+
+.top-text-container {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0; 
+    border-bottom: 1px solid #f2f2f2;
+}
+.top-text-container h1 {
+    font-size: 16px;
+    color: #000000;
+    line-height: 28px;
+    font-weight: normal;
+}
+.top-text-container p {
+    font-size: 13px;
+    color: #e5e5e5;
+}
+.mid-text-container {
+    border-bottom: 10px solid #f2f2f2;
+}
+.mid-text-container input {
+    height: 90px;
+    padding: 13px;
+    width: 100%;
+    color: #e5e5e5;
+    font-size: 13px;
+}
+.mid-container-other {
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    display: flex;
+}
+.mid-right-other {
+    width: 90%;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+}
+.baokuo {
+    width: 100%;
 }

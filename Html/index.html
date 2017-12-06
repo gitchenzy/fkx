@@ -1,0 +1,127 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>房客行</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/jquery.touchSlider.js"></script>
+    </head>
+    <body>
+        <div class="main_visual">
+                    <div class="flicking_con">
+                        <a >1</a>
+                        <a >2</a>
+                        <a >3</a>
+            
+                    </div>
+                    <div class="main_image">
+                        <ul>
+                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/1.jpg"></a></span></li>
+                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/2.jpg"></a></span></li>
+                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/3.jpeg"></a></span></li>
+                        </ul>
+                        <a href="javascript:;" id="btn_prev"></a>
+                        <a href="javascript:;" id="btn_next"></a>
+            
+                    </div>
+        </div>
+        <div class="mid-container">
+            <ul>
+                <li>
+                    <img src="images/1.jpg" alt="">
+                    <a href="">推荐注册分佣</a>
+                </li>
+                <li>
+                    <img src="images/1.jpg" alt="">
+                    <a href="">我的佣金</a>
+                </li>
+                <li>
+                    <img src="images/1.jpg" alt="">
+                    <a href="">全部楼盘</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mid-text">
+            <h1>全部楼盘</h1>
+        </div>
+      <div style="padding-bottom:50px;">
+        <div class="main-container">
+            <img src="images/1.jpg" alt="">
+            <div class="main-container-text">
+                <p>房源名称</p>
+                <p>均价：<span>666666</span>元／m²</p>
+            </div>
+            <div class="main-container-bottom">
+                <img src="images/local.png" alt="">
+                <p>福建省厦门市思明区 呢</p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-mane">
+        <div class="bottom-mane-heft">
+            <div class="bottom-mane-child">
+                <img src="images/index_2.png" alt="">
+                <a class="active" href="">首页</a>
+            </div>
+            <div class="bottom-mane-child">
+                <img src="images/build_1.png" alt="">
+                <a href="">楼盘</a>
+            </div>
+        </div>
+        <div class="bottom-mane-heft" style="padding-left:35px">
+            <div class="bottom-mane-child">
+                <img src="images/person_1.png" alt="">
+                <a href="">客户</a>
+            </div>
+            <div class="bottom-mane-child">
+                <img src="images/center_1.png" alt="">
+                <a href="">我的</a>
+            </div>
+        </div>
+    </div>
+        <script>
+                $(document).ready(function(){
+        $(".main_visual").hover(function(){
+            $("#btn_prev,#btn_next").fadeIn()
+        },function(){
+            $("#btn_prev,#btn_next").fadeOut()
+        });
+
+        $dragBln = false;
+
+        $(".main_image").touchSlider({
+            flexible : true,
+            speed : 200,
+            btn_prev : $("#btn_prev"),
+            btn_next : $("#btn_next"),
+            paging : $(".flicking_con a"),
+            counter : function (e){
+                $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+            }
+        });
+
+        $(".main_image").bind("mousedown", function() {
+            $dragBln = false;
+        });
+
+        $(".main_image").bind("dragstart", function() {
+            $dragBln = true;
+        });
+
+        $(".main_image a").click(function(){
+            if($dragBln) {
+                return false;
+            }
+        });
+
+        timer = setInterval(function(){
+            $("#btn_next").click();
+        }, 2500);
+
+    });
+        </script>   
+    </body>
+</html>

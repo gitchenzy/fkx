@@ -1,0 +1,127 @@
+.top-container {
+    padding: 8px 15px 15px 15px;
+    display: flex;
+}
+.top-container-left {
+    display: flex;
+    padding-top: 8.5px;
+}
+.top-container-left p {
+    font-size: 15px;
+    color: #000000;
+}
+.top-container-left img {
+    width: 12px;
+    height: 7px;
+    margin: 7px 10px 0 10px;
+    position: inline;
+}
+.top-container-right {
+    width:76%;
+}
+.top-container-right input {
+    width:100%;
+    height: 38px;
+    padding: 8px 0px 8px 45px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 19px;
+    background: #e5e5e5;
+}
+.text-container {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.text-container ul {
+    width: 100%;
+    display: flex;
+}
+.text-container ul li {
+    width: 25%;
+    text-align: center;
+}
+.text-container ul li a {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.3);
+}
+.text-container ul li img {
+    width: 12px;
+    height: 7px;
+    margin: 7px 0 0 5px;
+    position: inline;
+}
+.card-container {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.card-container img {
+    width: 95px;
+    height: 75px;
+    margin-right: 13px;
+}
+.card-container-right {
+
+}
+.card-container-right h1 {
+    font-size: 15px;
+    color: #000000;
+    font-weight: normal;
+    line-height: 18px;
+}
+.card-child-1 {
+}
+.card-child-1 p {
+    font-size: 14px;
+    color: rgba(245, 8, 8, 0.5);
+    display: inline;
+}
+.card-child-1 span {
+    font-size: 13px;
+    color: #000000;
+    display: inline;
+}
+.card-child-2 {
+    display: flex;
+}
+.childs-1{
+    padding: 1px 6px;   
+    background: #2c8be9;
+    text-align: center;
+}
+.childs-1 p{
+    font-size: 12px;
+    color: #ffffff;
+}
+.childs-2 {
+    padding: 1px 6px;
+    background: #44c3cc;
+    text-align: center;
+}
+.childs-2 p {
+    font-size: 12px;
+    color: #000000;
+}
+.last-child {
+}
+.last-child p {
+    font-size: 12px;
+    color: #c2c2c2;
+}
+
+@media screen and (max-width:321px) {
+    .top-container-left p {
+        font-size: 12px;
+        color: #000000;
+    }
+    .top-container-right input {
+        width:100%;
+        height: 38px;
+        padding: 8px 0px 8px 25px;
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.5);
+        border-radius: 19px;
+        background: #e5e5e5;
+    }
+}

@@ -309,7 +309,7 @@ div.ui-loader {
 .contents ul li {
     width: 41%;
     padding: 10px;
-    margin: 0 4px 10px 3px;
+    margin: 0 4px 10px 4px;
     border: 1px solid #e5e5e5;
     float: left;
 }
@@ -334,6 +334,19 @@ div.ui-loader {
     font-size: 12px;
     color: #666666;
     text-indent: 24px;
+}
+.b {
+    margin: 15px;
+    height: 40px;
+    background: #2c8be9;
+    border-radius: 5px;
+    text-align: center;
+}
+.b a {
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 38px;
+    letter-spacing: 5px;
 }
 
 

@@ -32,6 +32,7 @@
     width: 100%;
     padding-bottom: 10px;
     border-bottom: 1px solid #e5e5e5;
+    position: relative;
 }
 .text-container ul {
     width: 100%;
@@ -41,8 +42,9 @@
     width: 25%;
     text-align: center;
 }
-.text-container ul li a {
+.text-container ul li p {
     font-size: 15px;
+    display: inline;
     color: rgba(0, 0, 0, 0.3);
 }
 .text-container ul li img {
@@ -348,8 +350,54 @@ div.ui-loader {
     line-height: 38px;
     letter-spacing: 5px;
 }
+.btn-container {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: none;
+    padding: 15px;
+    position: absolute;
+}
+.btn-container ul {
+    display: block !important;
+}
+.btn-container ul li {
+    float: left;
+    width: 90px !important;
+    height: 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 21px;
+    padding-top: 5px;
+    margin: 0 10px 5px 0;
+    font-size: 12px;
+}
+.btn-container ul li:child {
+    font-size: 13px;
+    color: #333333;
+}
+.act {
+    border: 1px solid #44c3cc !important;
+    color: #44c3cc;
+}
 
-
+.close-1 {
+    height: 10px;
+    width: 1px;
+    background: #c2c2c2;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 14px;
+    right: 90px;
+}
+.close-2 {
+    height: 10px;
+    width: 1px;
+    background: #c2c2c2;
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 14px;
+    right: 90px;
+}
 
 @media screen and (max-width:321px) {
     .top-container-left p {

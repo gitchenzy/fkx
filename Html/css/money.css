@@ -86,3 +86,23 @@ body {
     color: #ffffff;
     line-height: 40px;
 }
+
+
+.kefu {
+    background: #ffffff;
+}
+.kefu ul li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+}
+.kefu ul li p {
+    font-size: 14px;
+    color: #333333;
+    margin:auto 5px auto 0;
+}
+.kefu ul li span {
+    font-size: 14px;
+    color: #666666;
+    margin:auto 5px auto 0;
+}

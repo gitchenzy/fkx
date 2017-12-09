@@ -1,8 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    outline: none;
 }
 html body{
+    max-width: 414px;
     font-family: "Microsoft Yahei" "微软雅黑";
     font-size: 62.5%;
     font: inherit;
@@ -12,4 +14,40 @@ a{
 }
 ul li{
     list-style: none;
+}
+input {
+    border: none;
+    text-decoration: none;
+    box-shadow: none;
+}
+.bottom-mane {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 8.5px;
+}
+.bottom-mane-heft {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 35px 5px 20px;
+}
+.bottom-mane-child {
+    text-align: center;
+}
+.bottom-mane-child img {
+    width: 23px;
+    height: 23px;
+}
+.bottom-mane-child a {
+    font-size: 13px;
+    display: block;
+    color: #000000;
+}
+.active {
+    color: #44c3ca !important;
 }

@@ -1,0 +1,24 @@
+
+<volist name="info" id="vo">
+     <div class="card-container">
+        <img src="{$vo.pic}" alt="">
+        <div class="card-container-right">
+            <h1>{$vo.title}</h1>
+            <div class="card-child-1">
+                <p>¥{$vo.price}</p>
+                <span>元／平起</span>
+            </div>
+            <div class="card-child-2">
+                <div class="childs-1">
+                    <p>佣金</p>
+                </div>
+                <div class="childs-2">
+                    <p>{$vo.prices}</p>
+                </div>
+            </div>
+            <div class="last-child">
+                <p>{$vo.address}</p>
+            </div>
+        </div>
+    </div>
+    </volist>

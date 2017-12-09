@@ -2,6 +2,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     <h4 class="modal-title" id="myModalLabel">设置佣金规则</h4>
 </div>
+<?php if($info){ ?>
 <volist name='info' id="vo">
     <div class="modal-body">
             <fieldset>
@@ -27,7 +28,7 @@
 
     </div>
 </volist>
-
+<?php }else{ ?>
 <div class="modal-body">
     <form class="form-horizontal" role="form" id="defaultForm" method="post" action="{$self}">
         <input type="hidden" name="loupan_id" value="{$Think.get.id}" />
@@ -56,7 +57,7 @@
     <button type="button" class="btn btn-default" data-dismiss="modal" id="close">关闭</button>
     <button type="button" class="btn btn-primary" id="submit">添加</button>
 </div>
-
+<?php } ?>
 <script type="text/javascript">
 
     $("#submit").click(function(){

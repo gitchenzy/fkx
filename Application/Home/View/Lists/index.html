@@ -1,0 +1,83 @@
+<extend name="Public/main" />
+<block name="css">
+    <link rel="stylesheet" href="/public/Home/css/build.css">
+</block>
+
+<block name="main">
+    <div class="top-container">
+        <div class="top-container-left">
+            <p>厦／漳</p>
+            <img src="/public/Home/images/down.png" alt="">
+        </div>
+        <div class="top-container-right">
+            <input type="text" placeholder="请输入楼盘名／地名／开发商">
+        </div>
+    </div>
+    <div class="text-container">
+        <ul>
+            <li><a href="">区域</a><img src="/public/Home/images/down.png" alt=""></li>
+            <li><a href="">总价</a><img src="/public/Home/images/down.png" alt=""></li>
+            <li><a href="">户型</a><img src="/public/Home/images/down.png" alt=""></li>
+            <li><a href="">更多</a><img src="/public/Home/images/down.png" alt=""></li>
+        </ul>
+    </div>
+    <div class="con" style="margin-bottom: 45px;">
+    <volist name="info" id="vo">
+        <div class="card-container">
+            <a href="{:U('Lists/lpinfo',array('id'=>$vo['id']))}">
+                <img src="{$vo.pic}" alt="">
+            </a>
+        <div class="card-container-right">
+            <h1>{$vo.title}</h1>
+            <div class="card-child-1">
+                <p>¥{$vo.price}</p>
+                <span>元／平起</span>
+            </div>
+
+                <div class="card-child-2">
+                    <div class="childs-1">
+                        <p>佣金</p>
+                    </div>
+                    <div class="childs-2">
+                        <p><?php if($yongjin == 1){ ?>{$vo.prices} <?php }else{ echo '登录可见'; ?> <?php } ?></p>
+                    </div>
+                </div>
+
+            <div class="last-child">
+                <p>{$vo.address}</p>
+            </div>
+        </div>
+    </div>
+    </volist>
+</div>
+</block>
+<block name="js">
+   <script>
+       var current_loading = false;
+       var page_container_object =  $("body").get(0);
+       var time=1;
+       $(window).scroll(function(){
+           var scroll_interval = page_container_object.scrollHeight - page_container_object.scrollTop-page_container_object.clientHeight;
+           if (scroll_interval <= 100 && !current_loading) {
+               current_loading = true;
+               loadMore(time);
+           }
+       });
+       //"向服务器请求数据"
+       function loadMore(te) {
+
+           $.get("{:U('Lists/loadloupan')}",{ time : te} , function(data) {
+               if(data.status==0){
+                   // $(".loadingA").add(".loadingB").add(".loadingC").hide();
+               }else{
+                   $(".con").last().append(data.info);
+                   current_loading =false;
+                   time++;
+               }
+           });
+       }
+
+   </script>
+    
+</block>
+

@@ -1,0 +1,37 @@
+body {
+    background: #f2f2f2;
+}
+.container {
+    margin-bottom: 10px;
+}
+.tle {
+    padding:10px 15px;
+    background: #ffffff;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+.tle p {
+    font-size: 13px;
+    color: #c2c2c2;
+    margin: auto 0;
+}
+.ble {
+    padding:10px 15px 5px 15px;
+    background: #ffffff;
+    text-align: left;
+}
+.ble ul li {
+    display: flex;
+    margin-bottom: 5px;
+}
+.ble ul li p {
+    font-size: 13px;
+    color: #333333;
+    margin: auto 5px auto 0;
+}
+.active {
+    color: #44c3cc;
+}
+.grey {
+    color: #c2c2c2 !important;
+}

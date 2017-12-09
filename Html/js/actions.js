@@ -4,7 +4,7 @@
                 var bg = document.getElementById('background');
                 items = {
                     wid: 400,
-                    hei: 711,
+                    hei: 680,
                     sec_1: 1000/61,
                     sec_2: 1000/35,
                     width: window.innerWidth,

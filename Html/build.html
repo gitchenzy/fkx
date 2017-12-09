@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="top-container">
-            <div class="top-container-left">
+            <div id="ads" class="top-container-left">
                 <p>厦／漳</p>
                 <img src="images/down.png" alt="">
             </div>
@@ -19,12 +19,47 @@
                 <input type="text" placeholder="请输入楼盘名／地名／开发商">
             </div>
         </div>
+        <div class="hide">
+                <div class="title-hide">
+                    <p>厦门</p>
+                </div>
+                <div class="li-cont">
+                    <ul>
+                        <li><p class="act">全部</p></li>
+                        <li><p>海沧</p></li>
+                        <li><p>湖里</p></li>
+                        <li><p>集美</p></li>
+                        <li><p>思明</p></li>
+                        <li><p>翔安</p></li>
+                        <li><p>同安</p></li>
+                        <li><p>旅居地产</p></li>
+                        <li><p>其他</p></li>
+                    </ul>
+                </div>
+                <div class="title-hide">
+                        <p>漳州</p>
+                    </div>
+                    <div class="li-cont">
+                        <ul>
+                            <li><p class="act">全部</p></li>
+                            <li><p>漳州开发区</p></li>
+                            <li><p>台商投资区</p></li>
+                            <li><p>长泰</p></li>
+                            <li><p>龙文</p></li>
+                            <li><p>芗城</p></li>
+                            <li><p>东山</p></li>
+                            <li><p>旅居地产</p></li>
+                            <li><p>漳浦</p></li>
+                        </ul>
+                    </div>
+                    <div class="close"></div>
+            </div>
         <div class="text-container" id="select">
             <ul id="up">
-                <li><p href="">总价</p><img src="images/down.png" alt=""></li>
-                <li><p href="">户型</p><img src="images/down.png" alt=""></li>
-                <li><p href="">装修</p><img src="images/down.png" alt=""></li>
-                <li><p href="">类型</p><img src="images/down.png" alt=""></li>
+                <li><p>总价</p><img src="images/down.png" alt=""></li>
+                <li><p>户型</p><img src="images/down.png" alt=""></li>
+                <li><p>装修</p><img src="images/down.png" alt=""></li>
+                <li><p>类型</p><img src="images/down.png" alt=""></li>
             </ul>
             <div class="btn-container" id="sccc">
                 <ul></ul>
@@ -127,6 +162,26 @@
                         $('#sccc').css('display','none')
                     })
 
+
+                    $('#ads').toggle(
+                        function(){
+                            console.log(12)
+                            $('.hide').css('display','block')
+                        },
+                        function(){
+                            $('.hide').css('display','none')
+                        }
+                    );
+                    $('.li-cont>ul li').on('click','p',function(){
+                        $('.li-cont>ul>li p').removeClass('act');
+                        $(this).addClass('act');
+                        var text = $(this).html();
+                        var code = text.slice(0,2);
+                        $('#ads p').html(code);
+                    })
+                    $('.close').click(function(){
+                        $('.hide').css('display','none')
+                    })
                 </script>
     </body>
 </html>

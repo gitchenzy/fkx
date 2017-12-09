@@ -14,7 +14,7 @@
                 function lok() {
                     if(items.width===414){
                         items.wid = 455;
-                        items.hei = 810;
+                        items.hei = 710;
                     }else if(items.width===375){
                         items.wid = 420;
                         items.hei = 750;

@@ -15,14 +15,14 @@
         <div class="login">
             <ul>
                 <li><img src="images/phone.png" alt=""><input type="text" value="请输入手机号码"></li>
-                <li><img src="images/lock.png" alt=""><input type="text" value="请输入密码"><img width="24px" height="24px" src="images/open.png" alt=""></li>
-                <li><img src="images/lock.png" alt=""><input type="text" value="请再次输入密码"><img src="images/close.png" alt=""></li>
+                <li><img src="images/lock.png" alt=""><input id="code" type="text" value="请输入密码"><img id="show" width="24px" height="24px" src="images/open.png" alt=""></li>
+                <li><img src="images/lock.png" alt=""><input id="codes" type="text" value="请再次输入密码"><img id="hide" src="images/open.png" alt=""></li>
             </ul>
             <div class="little">
                 <input class="chick" id="chk" type="checkbox">
                 <label for="chk"></label>
                 <p>同意《 <span>房客行用户协议</span>》</p>
-            </div>
+            </div> 
             <div class="btn">
                 <a href="">点击注册</a>
             </div>
@@ -33,5 +33,25 @@
             })
         </script>
     <script src="js/actions.js"></script>
+    <script>
+        $('#show').click(function(){
+            if($(this).attr('src')==='images/open.png') {
+                $('#code').prop('type','password')
+                $(this).attr('src','images/close.png')
+            }else{
+                $('#code').prop('type','text')
+                $(this).attr('src','images/open.png')
+            }
+        });
+        $('#hide').click(function(){
+            if($(this).attr('src')==='images/open.png') {
+                $('#codes').prop('type','password')
+                $(this).attr('src','images/close.png')
+            }else{
+                $('#codes').prop('type','text')
+                $(this).attr('src','images/open.png')
+            }
+        })
+    </script>
     </body>
 </html>

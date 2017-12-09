@@ -21,7 +21,7 @@
         <div class="mid-container">
             <div class="mid-container-top">
                 <div class="mid-text-left">
-                    <h1>瑞景花园二期</h1>
+                    <h1 id="build">瑞景花园二期三期四期</h1>
                     <p>20-90m²</p>
                 </div>
                 <div class="mid-text-right">
@@ -44,8 +44,8 @@
         </div>
         <div class="mid">
                 <ul>
-                    <li class="active"><img src="images/content-1.png" alt=""><p>详情</p></li>
-                    <li><img src="images/map-2.png" alt=""><p class="color">地图</p></li>
+                    <li class="active"><img id="img-1" src="images/content-1.png" alt=""><p id="p-1">详情</p></li>
+                    <li><img id="img-2" src="images/map-2.png" alt=""><p class="color" id="p-2">地图</p></li>
                 </ul>
             </div>
         <div class="text">
@@ -60,6 +60,9 @@
                 <li><p>物业公司</p><span>厦门哪里哪里</span></li>
                 <li><p>物业费</p><span>9元／月／平米</span></li>
             </ul>
+            <div class="texts">
+            <img src="images/1.jpg" alt="">
+        </div>
         </div>
         <div class="lang">
           <div style="margin:10px 0 0 15px;display:flex;">  
@@ -142,7 +145,34 @@
                 $(this).css('z-index','99');
                 
             })
-
+            var len = $('#build').html().length;
+            (function(){
+                if(len>=6){
+                   $('#build').css({'font-size':'14px','line-height':'27px'})
+                }
+            })();
+            $('.mid ul').on('click','li',function(){
+                var index = $(this).index();
+                if(index===0){
+                    $(this).addClass('active');
+                    $('.mid>ul li:eq(1)').removeClass('active');
+                    $('#p-1').removeClass('color');
+                    $('#p-2').addClass('color');
+                    $('#img-1').attr('src','images/content-1.png');
+                    $('#img-2').attr('src','images/map-2.png');
+                    $('.texts img').css('display','none');
+                    $('.text ul').css('display','block')
+                }else{
+                    $(this).addClass('active');
+                    $('.mid>ul li:eq(0)').removeClass('active')
+                    $('#p-2').removeClass('color');
+                    $('#p-1').addClass('color');
+                    $('#img-1').attr('src','images/content-2.png');
+                    $('#img-2').attr('src','images/map-1.png');
+                    $('.text ul').css('display','none');
+                    $('.texts img').css('display','block')
+                }
+            })
         </script>
     </body>
 </html>

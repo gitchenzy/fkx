@@ -20,9 +20,9 @@
                 <p>请选择体现方式</p>
                 <div class="net-in">
                     <input type="radio" class="chk" id="chk-1"><label for="chk-1"></label>
-                    <img src="images/alipay.png" alt="">
+                    <img id="img-1" src="images/alipay.png" alt="">
                     <input type="radio" class="chk" id="chk-2"><label for="chk-2"></label>
-                    <img src="images/bank.png" alt="">
+                    <img id="img-2" src="images/bank.png" alt="">
                 </div>
             </div>
         <div class="lang">
@@ -31,5 +31,21 @@
         <div class="lang">
                 <input type="text" placeholder="输入持卡人姓名或账号姓名">
         </div>
+        <script>
+            $('#img-1').click(function(){
+                $('#chk-1').attr('checked',true)
+                $('#chk-2').attr('checked',false)
+            })
+            $('#img-2').click(function(){
+                $('#chk-2').attr('checked',true)
+                $('#chk-1').attr('checked',false)
+            })
+            $('#chk-1').click(function(){
+                $('#chk-2').attr('checked',false)
+            })
+            $('#chk-2').click(function(){
+                $('#chk-1').attr('checked',false)
+            })
+        </script>
     </body>
 </html>

@@ -113,6 +113,13 @@
             </div>
 
             <div class="form-group">
+                <label  class="col-sm-2 control-label">标签</label>
+                <div class="col-sm-9">
+                    <input  class="form-control" placeholder="多个标签用英文分号隔开;" type="text" id="tag" name="tag" value="{$info.tag}" />
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label class="col-sm-2 control-label" for="">&nbsp;楼盘详情</label>
                 <div class="col-sm-9">
                     <textarea id="des" name="des" style="width: 99.9%; height: 260px;">{$info.des|htmlspecialchars_decode}</textarea>

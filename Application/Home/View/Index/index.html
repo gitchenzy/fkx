@@ -25,21 +25,23 @@
     <div class="mid-container">
         <ul>
             <li>
+
                 <img src="/public/Home/images/tuijian.png" alt="">
                 <a href="">推荐注册分佣</a>
             </li>
             <li>
-                <img src="/public/Home/images/money.png" alt="">
-                <a href="">我的佣金</a>
+                <a href="{:U('Center/mymoney')}">
+                <img src="/public/Home/images/money.png" alt=""></a>
+                <a href="{:U('Center/mymoney')}">我的佣金</a>
             </li>
-            <li>
-                <img src="/public/Home/images/buls.png" alt="">
-                <a href="">全部楼盘</a>
+            <li> <a href="{:U('Lists/index')}">
+                <img src="/public/Home/images/buls.png" alt=""></a>
+                <a href="{:U('Lists/index')}">全部房源</a>
             </li>
         </ul>
     </div>
     <div class="mid-text">
-        <h1>精选楼盘</h1>
+        <h1>精选房源</h1>
     </div>
 
     <div class="con" style="padding-bottom:50px;">
@@ -50,7 +52,7 @@
                 </a>
                 <div class="main-container-text">
                     <p>{$vo.title}</p>
-                    <p>均价：<span>{$vo.price}</span>元／m²</p>
+                    <p>佣金：<span>{$vo.prices}</span></p>
                 </div>
                 <div class="main-container-bottom">
                     <img src="/public/Home/images/local.png" alt="">

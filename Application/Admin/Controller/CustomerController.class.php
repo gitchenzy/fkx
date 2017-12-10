@@ -128,6 +128,108 @@ class CustomerController extends AdminController
         }
     }
 
+    public function report(){
+        $this -> display();
+    }
+    public function loadReport(){
+        $offset = i("offset");
+        $limit = i("limit");
+        $search_key = i('search_key');
+        $search_value = i('search');
+        if($search_value){
+            $where['phone'] = array('LIKE',"%$search_value%");;
+        }
+        $sort = i('sort');
+        $order = i('order');
+        if(!empty($sort)){
+            $reorder = $sort." ".$order;
+        }else{
+            $reorder = 'id asc';
+        }
+        $list =  M('report')-> where($where) -> order('created_at desc') ->limit($offset,$limit) -> select();
+        foreach($list as &$li){
+            $li['user_name'] = M('users') -> where(['id'=>$li['user_id']]) -> getField('user_name');
+            $li['loupanr_name'] = M('loupan') -> where(['id'=>$li['loupan_id']]) -> getField('title');
+            switch($li['zhiye']){
+                case 1;
+                    $li['zhiye'] = '投资';
+                    break;
+                case 2;
+                    $li['zhiye'] = '自住';
+                    break;
+                case 3;
+                    $li['zhiye'] = '投资兼自住';
+                    break;
+                default:
+                    $li['zhiye'] = '无';
+                    break;
+            }
+            switch($li['huxing']){
+                case 1;
+                    $li['huxing'] = '一房';
+                    break;
+                case 2;
+                    $li['huxing'] = '两房';
+                    break;
+                case 3;
+                    $li['huxing'] = '三房';
+                    break;
+                case 4;
+                    $li['huxing'] = '四房';
+                    break;
+                case 5;
+                    $li['huxing'] = '五房及以上';
+                    break;
+                default:
+                    $li['huxing'] = '无';
+                    break;
+
+            }
+            if($li['status']==1){
+                $li['status'] = '跟进';
+            }elseif($li['status']==2){
+                $li['status'] = '成交';
+            }else{
+                $li['status'] = '失效';
+            }
+            $li['sex'] = $li['sex']==1?'女':'男';
+            $li['created_at'] = date('Y-m-d H:i',$li['created_at']);
+        }
+        //dump($list);
+        $count =   M('report')-> where($where) -> order('created_at desc') -> count();
+        $list_array= array("total"=>$count,"rows"=>$list?$list:array());
+        echo json_encode($list_array);
+
+    }
+    public function editReport(){
+        $id = i('id');
+        $where['id'] = $id;
+        if(IS_POST){
+            $data = i('post.');
+            M('report') -> where($where) -> save($data);
+            $this->success('修改成功！');
+        }else{
+            $res = M('report') -> where($where)-> find();
+            $this->assign('info',$res);
+            $this-> display('editreport');
+        }
+    }
+    public function delReport(){
+        $array_id['id'] = array('in',$_POST['ids']);
+        M('report') -> where($array_id) -> delete();
+        $this -> success('删除成功！');
+    }
+    public function genj(){
+        if(IS_POST){
+            $data = i('post.');
+            $data['created_at'] = time();
+            M('followup') -> add($data);
+            $this->success('增加成功！');
+        }else{
+            $this-> display();
+        }
+    }
+
     //会员等级
     public function grade(){
         $this -> display();

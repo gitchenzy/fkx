@@ -1,7 +1,10 @@
 
 <volist name="info" id="vo">
      <div class="card-container">
-        <img src="{$vo.pic}" alt="">
+
+         <a href="{:U('Lists/lpinfo',array('id'=>$vo['id']))}">
+             <img src="{$vo.pic}" alt="">
+         </a>
         <div class="card-container-right">
             <h1>{$vo.title}</h1>
             <div class="card-child-1">

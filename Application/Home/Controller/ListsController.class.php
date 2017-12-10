@@ -13,7 +13,7 @@ class ListsController extends Controller {
 
 	}
     public function index(){
-
+		session('key',2);
 		//查询楼盘
 		$info = M('loupan') -> where(['is_del' => 0,'status'=>1]) -> order('id desc') ->limit(0,5) -> select();
 		$this -> assign('info',$info);
@@ -43,10 +43,14 @@ class ListsController extends Controller {
 		$id = I('id');
 		$where['id'] = $id;
 		$info = M('loupan') -> where($where) ->  find();
+		$info['city'] = M('citys') -> where(['id'=>$info['city_id']]) -> getField('city_name');
+		$info['tag'] = explode(';',$info['tag']);
 		//处处相应的佣金规则 跟 合作规则
 		$cooperation = M('cooperation') -> where(['loupan_id'=>$id]) ->  find();
+		$cooperation['des'] = explode(';',$cooperation['des']);
 		//佣金规则
 		$commission = M('commission') -> where(['loupan_id'=>$id]) ->  find();
+		$commission['des'] = explode(';',$commission['des']);
 		$this -> assign('info',$info);
 		$this -> assign('cooperation',$cooperation);
 		$this -> assign('commission',$commission);

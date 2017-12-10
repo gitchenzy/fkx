@@ -73,6 +73,7 @@ class LoupanController extends AdminController
        if(IS_POST){
             $data = i('post.');
            $data['add_at'] = strtotime($data['add_at']);
+           $data['tag'] = rtrim($data['tag'],';');
            $data['created_at'] = strtotime($data['created_at']);
            $data['city_id'] = M('citys')->where(['id'=> $data['area_id']]) -> getfield('pid');
            $res = M('loupan') -> add($data);
@@ -111,7 +112,7 @@ class LoupanController extends AdminController
 
             $data['add_at'] = strtotime($data['add_at']);
             $data['created_at'] = strtotime($data['created_at']);
-
+            $data['tag'] = rtrim($data['tag'],';');
             M('loupan') -> where($where) -> save($data);
             $this -> success('修改成功！');
         }else{

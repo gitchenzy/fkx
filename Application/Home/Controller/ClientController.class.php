@@ -10,10 +10,12 @@ class ClientController extends Controller {
 			$this -> redirect('Login/index');
 		}
 		$this -> user_id = $user['id'];
+
 	//	echo $user_id;
 	}
 
     public function index(){
+		session('key',3);
 		$status = I('status');
 		$search = I('search');
 		$where['user_id'] = $this -> user_id;
@@ -24,12 +26,15 @@ class ClientController extends Controller {
 			$w['status'] = '';
 		}
 		if(isset($search) && !empty($search)){
-			$w['search'] = $where['phone|nick_name'] = $search;
+			$w['search'] = $where['phone|nick_name'] = ['like',"%{$search}%"];
 		}else{
 			$w['search'] = '';
 		}
 
-		$info = M('report') -> where($where) -> order('created_at DESC')-> limit(0,20) ->select();
+		$info = M('report') -> where($where) -> order('created_at desc')-> limit(0,20) ->select();
+
+	//	dump($info);
+
 		$count['all'] = M('report') -> where(['user_id'=>$where['user_id']]) -> count();
 		$count['gj'] = M('report') -> where(['user_id'=>$where['user_id'],'status'=>1]) -> count();
 		$count['cj'] = M('report') -> where(['user_id'=>$where['user_id'],'status'=>2]) -> count();
@@ -49,12 +54,19 @@ class ClientController extends Controller {
 		$id = I('id');
 		$where['id'] = $id;
 		$info = M('report') -> where($where) ->find();
-		if($info['zhiye']==1){
-			$info['zhiye'] = '投资';
-		}elseif($info['zhiye']==2){
-			$info['zhiye'] = '自住';
-		}else{
-			$info['zhiye'] = '投资兼自住';
+		switch($info['zhiye']){
+			case 1;
+				$info['zhiye'] = '投资';
+				break;
+			case 2;
+				$info['zhiye'] = '自住';
+				break;
+			case 3;
+				$info['zhiye'] = '投资兼自住';
+				break;
+			default:
+				$info['zhiye'] = '无';
+				break;
 		}
 		switch($info['huxing']){
 			case 1;
@@ -71,6 +83,9 @@ class ClientController extends Controller {
 				break;
 			case 5;
 				$info['huxing'] = '五房及以上';
+				break;
+			default:
+				$info['huxing'] = '无';
 				break;
 		}
 		$info['sex'] = $info['sex']==1?'女':'男';
@@ -91,7 +106,7 @@ class ClientController extends Controller {
 		$data = I('post.');
 		$ing = M('report') -> where(['phone'=>$data['phone']]) ->find();
 		if($ing){
-			$this -> error('该客户已经报备');
+			$this -> error('该号码已被报备，尚在审核期，暂不可报备');
 		}
 		$data['user_id'] = $this -> user_id;
 		$data['status'] = 1;

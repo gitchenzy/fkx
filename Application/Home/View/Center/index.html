@@ -1,0 +1,94 @@
+<extend name="Public/main" />
+<block name="css">
+    <link rel="stylesheet" href="/public/Home/css/center.css">
+</block>
+
+<block name="main">
+    <div class="banner">
+        <img src="{$info.pic|default='/public/Home/images/bg.png'}" alt="">
+        <h1>{$info.nick_name}</h1>
+        <p>{$info.phone}</p>
+    </div>
+    <div class="container" style="margin-bottom: 45px;">
+        <ul>
+            <a href="{:U('Client/index')}">
+                <li>
+
+                    <div class="left">
+                        <img src="/public/Home/images/person.png" alt="">
+                        <p>我的客户</p>
+                    </div>
+                    <div class="right">
+                        <img src="/public/Home/images/arrow.png" alt="">
+                    </div>
+
+                </li>
+            </a>
+            <li>
+                <div class="left">
+                    <img src="/public/Home/images/money.png" alt="">
+                    <p>我的佣金</p>
+                </div>
+                <div class="right">
+                    <img src="/public/Home/images/arrow.png" alt="">
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="left">
+                    <img src="/public/Home/images/phonelittle.png" alt="">
+                    <p>绑定手机号</p>
+                </div>
+                <div class="right">
+                    <img src="/public/Home/images/arrow.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <img src="/public/Home/images/new.png" alt="">
+                    <p>推荐注册佣金</p>
+                </div>
+                <div class="right">
+                    <img src="/public/Home/images/arrow.png" alt="">
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <div class="left">
+                    <img src="/public/Home/images/lows.png" alt="">
+                    <p>平台规则</p>
+                </div>
+                <div class="right">
+                    <img src="/public/Home/images/arrow.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <img src="/public/Home/images/about.png" alt="">
+                    <p>关于平台</p>
+                </div>
+                <div class="right">
+                    <img src="/public/Home/images/arrow.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="left">
+                    <img src="/public/Home/images/call.png" alt="">
+                    <p>联系客服</p>
+                </div>
+                <div class="right">
+                    <img src="/public/Home/images/arrow.png" alt="">
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</block>
+<block name="js">
+
+
+</block>
+

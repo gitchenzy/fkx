@@ -13,9 +13,9 @@
         </div>
         <div class="main_image">
             <ul>
-                <li><span><a href=""><img id="b_{$ak + 1}" src="/public/Home/images/1.jpg"></a></span></li>
-                <li><span><a href=""><img id="b_{$ak + 1}" src="/public/Home/images/2.jpg"></a></span></li>
-                <li><span><a href=""><img id="b_{$ak + 1}" src="/public/Home/images/3.jpeg"></a></span></li>
+                <volist name="ad" id="a" key="ak">
+                <li><span><a href="{$a.url}"><img id="b_{$ak + 1}" src="{$a.pic}"></a></span></li>
+                </volist>
             </ul>
             <a href="javascript:;" id="btn_prev"></a>
             <a href="javascript:;" id="btn_next"></a>
@@ -25,27 +25,29 @@
     <div class="mid-container">
         <ul>
             <li>
-                <img src="/public/Home/images/1.jpg" alt="">
+                <img src="/public/Home/images/tuijian.png" alt="">
                 <a href="">推荐注册分佣</a>
             </li>
             <li>
-                <img src="/public/Home/images/1.jpg" alt="">
+                <img src="/public/Home/images/money.png" alt="">
                 <a href="">我的佣金</a>
             </li>
             <li>
-                <img src="/public/Home/images/1.jpg" alt="">
+                <img src="/public/Home/images/buls.png" alt="">
                 <a href="">全部楼盘</a>
             </li>
         </ul>
     </div>
     <div class="mid-text">
-        <h1>全部楼盘</h1>
+        <h1>精选楼盘</h1>
     </div>
 
-    <div style="padding-bottom:50px;">
+    <div class="con" style="padding-bottom:50px;">
         <volist name="info" id="vo">
             <div class="main-container">
-                <img src="{$vo.pic}" alt="">
+                <a href="{:U('Lists/lpinfo',array('id'=>$vo['id']))}">
+                    <img src="{$vo.pic}" alt="">
+                </a>
                 <div class="main-container-text">
                     <p>{$vo.title}</p>
                     <p>均价：<span>{$vo.price}</span>元／m²</p>
@@ -57,10 +59,34 @@
             </div>
         </volist>
     </div>
-
 </block>
 <block name="js">
+    <script>
+        var current_loading = false;
+        var page_container_object =  $("body").get(0);
+        var time=1;
+        $(window).scroll(function(){
+            var scroll_interval = page_container_object.scrollHeight - page_container_object.scrollTop-page_container_object.clientHeight;
+            if (scroll_interval <= 100 && !current_loading) {
+                current_loading = true;
+                loadMore(time);
+            }
+        });
+        //"向服务器请求数据"
+        function loadMore(te) {
 
+            $.get("{:U('Index/loadloupan')}",{ time : te} , function(data) {
+                if(data.status==0){
+                    // $(".loadingA").add(".loadingB").add(".loadingC").hide();
+                }else{
+                    $(".con").last().append(data.info);
+                    current_loading =false;
+                    time++;
+                }
+            });
+        }
+
+    </script>
     
 </block>
 

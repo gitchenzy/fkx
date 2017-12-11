@@ -1,4 +1,7 @@
-
+          (function() {
+              var pic = document.getElementById('background');
+              pic.onload = controls();
+          })()
             function controls() {
                 var bgContainer = document.getElementById('container');
                 var bg = document.getElementById('background');
@@ -46,4 +49,4 @@
                 bgContainer.style.width = items.width;
                 bgContainer.style.height = items.height;       
             }
-            controls();
+            

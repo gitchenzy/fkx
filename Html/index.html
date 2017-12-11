@@ -11,13 +11,22 @@
     </head>
     <body>
         <div class="main_visual">   
+                <div class="flicking_con">
+                                          
+            
+                    </div>
                     <div class="main_image">
                         <ul>
                                 <li><span><a href=""><img id="b_{$ak + 1}" src="images/1.jpg"></a></span></li>
                                 <li><span><a href=""><img id="b_{$ak + 1}" src="images/2.jpg"></a></span></li>
                                 <li><span><a href=""><img id="b_{$ak + 1}" src="images/3.jpeg"></a></span></li>
-                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/bank.png"></a></span></li>
-                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/alipay.png"></a></span></li>
+                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/3.jpeg"></a></span></li>
+                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/3.jpeg"></a></span></li>
+                                <li><span><a href=""><img id="b_{$ak + 1}" src="images/3.jpeg"></a></span></li>
+                                
+                                
+                                
+                                
                         </ul>
                         <a href="javascript:;" id="btn_prev"></a>
                         <a href="javascript:;" id="btn_next"></a>
@@ -85,6 +94,23 @@
         </div>
     </div>
         <script>
+            var indexLi = $('.main_image>ul li').length;
+                       
+            (function() {
+                var wid = window.innerWidth*0.04;
+                var left = Number($('.flicking_con').css('left').slice(0,3))
+                
+                var num = indexLi-3;
+                var slip = left-num*wid;
+                console.log(slip)
+                $('.flicking_con').css('left',slip)
+                for(i=0;i<indexLi;i++){
+                    var a = '<a></a>'
+                    
+                $('.flicking_con').append(a)
+            }
+            })()
+
                 $(document).ready(function(){
         $(".main_visual").hover(function(){
             $("#btn_prev,#btn_next").fadeIn()

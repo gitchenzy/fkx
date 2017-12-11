@@ -5,7 +5,7 @@
 }
 html body{
     max-width: 414px;
-    font-family: "Microsoft Yahei" "微软雅黑";
+    font-family: "Microsoft YaHei" "微软雅黑";
     font-size: 62.5%;
     font: inherit;
 }
@@ -51,7 +51,9 @@ input {
 .active {
     color: #44c3ca !important;
 }
-
+input {
+    font-family: "Microsoft YaHei"
+}
 @media screen and (min-width:413px) {
     .bottom-mane-heft {
         padding: 0px 41px 5px 35px;

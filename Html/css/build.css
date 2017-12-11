@@ -32,6 +32,7 @@
     width: 100%;
     padding-bottom: 10px;
     border-bottom: 1px solid #e5e5e5;
+    background: #fff;
     position: relative;
 }
 .text-container ul {
@@ -64,13 +65,33 @@
     margin-right: 13px;
 }
 .card-container-right {
-
+    display: flex;
+    justify-content: space-between;
+}
+.solid {
+    position: fixed;
+    top: 0%;
+    padding-top:10px;
 }
 .card-container-right h1 {
     font-size: 15px;
     color: #000000;
     font-weight: normal;
     line-height: 18px;
+}
+.right {
+    padding: 10px 0 0 45px;
+    text-align: center;
+}
+.right img {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+.right p {
+    font-size: 14px;
+    color: #44c3cc;
+    line-height: 24px;
 }
 .card-child-1 {
 }
@@ -364,7 +385,7 @@ div.ui-loader {
     position: absolute;
 }
 .btn-container ul {
-    display: block !important;
+    display: none;
 }
 .btn-container ul li {
     float: left;

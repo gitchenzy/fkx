@@ -6,10 +6,6 @@
 <block name="main">
     <div class="main_visual">
         <div class="flicking_con">
-            <a >1</a>
-            <a >2</a>
-            <a >3</a>
-
         </div>
         <div class="main_image">
             <ul>
@@ -64,6 +60,22 @@
 </block>
 <block name="js">
     <script>
+                var indexLi = $('.main_image>ul li').length;               
+            (function() {
+                var wid = window.innerWidth*0.04;
+                var left = Number($('.flicking_con').css('left').slice(0,3))
+                
+                var num = indexLi-3;
+                var slip = left-num*wid;
+                console.log(slip)
+                $('.flicking_con').css('left',slip)
+                for(i=0;i<indexLi;i++){
+                    var a = '<a></a>'
+                    
+                $('.flicking_con').append(a)
+            }
+            })()
+
         var current_loading = false;
         var page_container_object =  $("body").get(0);
         var time=1;

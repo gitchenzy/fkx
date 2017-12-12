@@ -223,4 +223,13 @@ div.flicking_con a.on {
         width: 16px;
         height: 20px;
     }
+    .mid-container ul li:first-child {
+        margin: 0 12.6 20px 6.6px !important;
+    }
+    .mid-container ul li a {
+        display: block;
+        width: 78px !important;
+        font-size: 13px;
+        color: #000000;
+    }
 }

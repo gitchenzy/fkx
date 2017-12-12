@@ -74,6 +74,7 @@
 }
 .container-text-left {
     padding-left: 20px;
+    width: 170px;
 }
 .container-text-left h2 {
     font-size: 15px;
@@ -88,6 +89,31 @@
 .container-text-right {
 
 }
+.container-text-left p {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    line-height: 22px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+@media screen and (min-width:413px) {
+    .container-text-left {
+        padding-left: 20px;
+        width: 200px;
+    } 
+}
+@media screen and (min-width:374px) {
+    .container-text-left {
+        padding-left: 20px;
+        width: 180px;
+    }
+}
+@media screen and (min-width:319px) {
+    .container-text-left {
+        padding-left: 20px;
+        width: 150x;
+    }
+}
 .container-text-right p {
     font-size: 12px;
     color: rgba(0, 0, 0, 0.3);
@@ -98,7 +124,6 @@
     color: #44c3ca;
     font-size: 12px;
 }
-
 .top-text-container {
     width: 100%;
     text-align: center;

@@ -164,6 +164,7 @@
     top: 0;
     left: 0;
     z-index: 100;
+    display: none;
 }
 .test ul li img {
     width: 360px;

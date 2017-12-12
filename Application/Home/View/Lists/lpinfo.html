@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="test">
-    <ul>
+    <ul id="pics">
         <volist name="luobo" id="lb">
         <li><img src="{$lb.pic}" alt=""></li>
         </volist>
@@ -116,9 +116,15 @@
 </body>
 
 <script>
+    (function() {
+        $('#pics>ul li').eq(0).css('display','block');
+        $('#pics ul').on('touchmove','li',function() {
+            console.log($(this).index())
+        })
+    })()
 
 
-            var len = $('#build').html().length;
+    var len = $('#build').html().length;
             (function(){
                 if(len>=6){
                    $('#build').css({'font-size':'14px','line-height':'27px'})

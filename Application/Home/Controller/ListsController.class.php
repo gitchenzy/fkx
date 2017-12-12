@@ -51,6 +51,12 @@ class ListsController extends Controller {
 		//佣金规则
 		$commission = M('commission') -> where(['loupan_id'=>$id]) ->  find();
 		$commission['des'] = explode(';',$commission['des']);
+		//查出轮播图
+		$luobo = M('zhuli') -> where(['loupan_id'=>$id, 'type'=>1]) ->select();
+		//   dump($luobo);
+		$huxing = M('zhuli') -> where(['loupan_id'=>$id, 'type'=>2]) ->select();
+		$this -> assign('luobo',$luobo);
+		$this -> assign('huxing',$huxing);
 		$this -> assign('info',$info);
 		$this -> assign('cooperation',$cooperation);
 		$this -> assign('commission',$commission);

@@ -147,9 +147,47 @@ class LoupanController extends AdminController
     //修改详细信息
     public function editinfo(){
 
-
+        $id = I('id');
+        $luobo = M('zhuli') -> where(['loupan_id'=>$id, 'type'=>1]) ->select();
+     //   dump($luobo);
+        $huxing = M('zhuli') -> where(['loupan_id'=>$id, 'type'=>2]) ->select();
+        $this -> assign('luobo', $luobo);
+        $this -> assign('huxing', $huxing);
+        $this -> assign('id', $id);
 
         $this->display();
+    }
+    public function uplb(){
+        $info = I('post.');
+        $info['type'] = 1;
+        $res = M('zhuli')->add($info);
+        if($res){
+            $this -> success('上传成功！');
+        }else{
+            $this -> error("上传失败！");
+        }
+    }
+    public function uphx(){
+        $info = I('post.');
+        $info['type'] = 2;
+        $res = M('zhuli')->add($info);
+        if($res){
+            $this -> success('上传成功！');
+        }else{
+            $this -> error("上传失败！");
+        }
+    }
+
+    public function updel(){
+        $id = I('id');
+        $info = M('zhuli')-> where(['id'=>$id]) ->find();
+        $res = M('zhuli')-> where(['id'=>$id]) ->delete();
+        if($res){
+            unlink(ROOT_PATH.$info['pic']);
+            $this -> success('删除成功！');
+        }else{
+            $this -> error("删除失败！");
+        }
     }
     //佣金规则
     public function addYongjin(){

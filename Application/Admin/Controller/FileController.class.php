@@ -48,6 +48,36 @@ class FileController extends AdminController{
         Log::record(json_encode($return) , Log::INFO);
         $this->ajaxReturn($return);
     }
+    /**
+     * 上传轮播图
+     */
+    public function uploadlunbo(){
+        $return  = array('status' => 1, 'info' => '上传成功', 'data' => '');
+        $data['loupan_id'] = I('pid');
+        $data['type'] = 1;
+        $setting['rootPath'] = "uploads/loupan/";
+        makeDir(ROOT_PATH."/".$setting['rootPath']);
+        $Upload = new Upload($setting, "local", C("UPLOAD_LOCAL_CONFIG"));
+        $info   = $Upload->upload($_FILES);
+       // dump($info);
+        if ($info) {
+            $data['pic'] = "/" . $setting['rootPath'] . $info['Filedata']['savepath'] . $info['Filedata']['savename'];
+            $res = M('zhuli') -> add($data);
+            if($res){
+                $return['info'] =  '上传成功';
+                $return['status'] = 1;
+            }else{
+                $return['info'] =  '上传失败';
+                $return['status'] = 0;
+            }
+        }
+        else {
+            $return['info'] =  $Upload->getError();
+            $return['status'] = 0;
+        }
+        Log::record(json_encode($return) , Log::INFO);
+        $this->ajaxReturn($return);
+    }
 
     public function uploadType(){
         $return  = array('status' => 1, 'info' => '上传成功', 'data' => '');

@@ -18,6 +18,14 @@
 }
 .top-container-right {
     width:76%;
+    position: relative;
+}
+.top-container-right img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
 }
 .top-container-right input {
     width:100%;
@@ -32,6 +40,7 @@
     width: 100%;
     padding-bottom: 10px;
     border-bottom: 1px solid #e5e5e5;
+    background: #fff;
     position: relative;
 }
 .text-container ul {
@@ -64,7 +73,13 @@
     margin-right: 13px;
 }
 .card-container-right {
-
+    display: flex;
+    justify-content: space-between;
+}
+.solid {
+    position: fixed;
+    top: 0%;
+    padding-top:10px;
 }
 .card-container-right h1 {
     font-size: 15px;
@@ -72,12 +87,27 @@
     font-weight: normal;
     line-height: 18px;
 }
+.right {
+    padding: 10px 0 0 45px;
+    text-align: center;
+}
+.right img {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+.right p {
+    font-size: 14px;
+    color: #44c3cc;
+    line-height: 24px;
+}
 .card-child-1 {
 }
 .card-child-1 p {
     font-size: 14px;
     color: rgba(245, 8, 8, 0.5);
     display: inline;
+    line-height: 21px;
 }
 .card-child-1 span {
     font-size: 13px;
@@ -86,6 +116,7 @@
 }
 .card-child-2 {
     display: flex;
+    margin-bottom: 2px;
 }
 .childs-1{
     padding: 1px 6px;   
@@ -341,6 +372,7 @@ div.ui-loader {
     font-size: 12px;
     color: #666666;
     text-indent: 24px;
+    line-height: 20px;
 }
 .b {
     margin: 15px;
@@ -364,7 +396,7 @@ div.ui-loader {
     position: absolute;
 }
 .btn-container ul {
-    display: block !important;
+    display: none;
 }
 .btn-container ul li {
     float: left;

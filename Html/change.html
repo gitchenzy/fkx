@@ -9,15 +9,21 @@
     </head>
     <body style="background:#fff">
         <div class="bind">
-            <ul>
-                <li><div class="left"><img src="images/phone.png" alt=""><input type="text" placeholder="请输入手机号"></div></li>
-                <li><div class="left"><img src="images/lock.png" alt=""><input style="width:200px" type="text" placeholder="请输入验证码"></div><div class="right" id="code"><p>获取验证码</p></div></li>
+            <ul id="img">
+                <li><div class="left"><img src="images/lock.png" alt=""><input type="text" placeholder="请输入原密码"></div><div id="chek"><img width="20" height="22" src="images/open.png" alt=""></div></li>
+                <li><div class="left"><img src="images/lock.png" alt=""><input type="text" placeholder="请输入新密码，6-16位"></div><div id="chek"><img width="20" height="22" src="images/open.png" alt=""></div></li>
+                <li><div class="left"><img src="images/lock.png" alt=""><input type="text" placeholder="请再次输入新密码"></div><div id="chek"><img width="20" height="22" src="images/open.png" alt=""></div></li>
+                
             </ul>
         </div>
         <div class="btn">
-            <a href="">确认</a>
+            <a href="">确认修改</a>
         </div>
         <script>
+            var im = $('#chek img');
+            im.on('click',function(){
+                console.log($(this).index())
+            })
                 $('#code').click(function(){
                     if($('#code p').html()!=='获取验证码'){
                             return false
@@ -29,7 +35,7 @@
                         $('#code p').html(n);
                         if(n===0){
                             clearInterval(t);
-                            $('#code p').html('获取验证码')
+                            $('#code p').html('点击获取验证码')
                         }
                     },1000)
                 })

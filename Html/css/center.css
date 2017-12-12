@@ -5,7 +5,18 @@ body {
     width: 100%;
     height: 200px;
     text-align: center;
-    background: url(../images/1.jpg)
+    background: url(../images/beijing.png);
+    background-size: 100% 200px;
+    position: relative;
+}
+.seting {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.seting img {
+    width: 21px !important;
+    height: 21px !important;
 }
 .banner img {
     width: 60px;

@@ -26,6 +26,6 @@ class CenterController extends Controller {
 		$this -> assign('info',$info);
 		$this -> display();
 	}
-	
+
 
 }

@@ -59,18 +59,27 @@
             <li><p>类型</p><img src="/public/Home/images/down.png" alt=""></li>
         </ul>
         <div class="btn-container" id="sccc">
-                <ul>
-                        <li>100万-2000万</li>
+                    <ul>
+                        <volist name="jiage" id="jg">
+                            <li><a href="">{$jg.jiage_name}</a></li>
+                        </volist>
+                    </ul>
+
+                    <ul>
+                        <volist name="huxing" id="hx">
+                            <li><a href="">{$hx.huxing_name}</a></li>
+                        </volist>
                     </ul>
                     <ul>
-                            <li>两室一厅</li>
-                    </ul>
-                    <ul>
-                            <li>精装</li>
+                        <volist name="zxiu" id="zx">
+                            <li><a href="">{$zx.zxiu_name}</a></li>
+                        </volist>
     
                     </ul>
                     <ul>
-                            <li>类型</li>
+                        <volist name="types" id="ty">
+                            <li><a href="">{$ty.type_name}</a></li>
+                        </volist>
     
                     </ul>
             <div id="close">

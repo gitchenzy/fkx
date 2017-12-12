@@ -15,7 +15,16 @@ class ListsController extends Controller {
     public function index(){
 		session('key',2);
 		//查询楼盘
+		//查询总价、
+		$jiage = M('jiage') -> where(['is_del'=>0]) -> select();
+		$huxing = M('huxing') -> where(['is_del'=>0]) -> select();
+		$zxiu = M('zxiu') -> where(['is_del'=>0]) -> select();
+		$types = M('types') -> where(['is_del'=>0]) -> select();
 		$info = M('loupan') -> where(['is_del' => 0,'status'=>1]) -> order('id desc') ->limit(0,5) -> select();
+		$this -> assign('jiage',$jiage);
+		$this -> assign('huxing',$huxing);
+		$this -> assign('zxiu',$zxiu);
+		$this -> assign('types',$types);
 		$this -> assign('info',$info);
 		$this -> display();
 	}

@@ -16,7 +16,6 @@
         <volist name="luobo" id="lb">
         <li><img src="{$lb.pic}" alt=""></li>
         </volist>
-        <p>1/3</p>
     </ul>
 </div>
 <div class="mid-container">
@@ -117,7 +116,9 @@
 </body>
 
 <script>
-                var len = $('#build').html().length;
+
+
+            var len = $('#build').html().length;
             (function(){
                 if(len>=6){
                    $('#build').css({'font-size':'14px','line-height':'27px'})

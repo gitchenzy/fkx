@@ -22,8 +22,8 @@
 <div class="mid-container">
     <div class="mid-container-top">
         <div class="mid-text-left">
-            <h1>{$info.title}</h1>
-            <p>{$info.size}m²</p>
+            <h1 id="build">{$info.title}</h1>
+            <p>{$info.size}</p>
         </div>
         <div class="mid-text-right">
             <h2>{$info.price}</h2>
@@ -117,7 +117,12 @@
 </body>
 
 <script>
-
+                var len = $('#build').html().length;
+            (function(){
+                if(len>=6){
+                   $('#build').css({'font-size':'14px','line-height':'27px'})
+                }
+            })();
 
     var wid = $(window).width();
     (function(){

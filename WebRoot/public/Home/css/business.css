@@ -111,7 +111,7 @@
 @media screen and (min-width:319px) {
     .container-text-left {
         padding-left: 20px;
-        width: 150x;
+        width: 149px !important;
     }
 }
 .container-text-right p {

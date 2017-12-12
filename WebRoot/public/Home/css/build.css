@@ -112,7 +112,12 @@
     color: #c2c2c2;
 }
 
-
+.texts img {
+    display: none;
+    width: 330px;
+    height: 198px;
+   
+}
 .test {
     width: 100%;
 }
@@ -168,6 +173,7 @@
     display: flex;
 }
 .mid-text-right h2 {
+    line-height: 22px;
     font-size: 16px;
     color: red;
 }
@@ -233,7 +239,7 @@
 .mid ul li p {
     background: inherit;
     font-size: 14px;
-    color: #2c8be9;
+    /*color: #2c8be9;*/
     margin:8px 5px 0 0;
 }
 .color {
@@ -242,6 +248,7 @@
 .active {
     border-bottom: 2px solid #2c8be9;
     height: 36px;
+    color: #2c8be9 !important;
 }
 .text {
     margin: 15px;
@@ -340,16 +347,15 @@ div.ui-loader {
 .b {
     margin: 15px;
     height: 40px;
-    background: #2c8be9;
+    background: #44c3ca;
     border-radius: 5px;
     text-align: center;
-}
-.b a {
     font-size: 17px;
     color: #ffffff;
     line-height: 38px;
     letter-spacing: 5px;
 }
+
 .btn-container {
     width: 100%;
     height: 60px;
@@ -359,7 +365,7 @@ div.ui-loader {
     position: absolute;
 }
 .btn-container ul {
-    display: block !important;
+    display: none;
 }
 .btn-container ul li {
     float: left;
@@ -413,6 +419,9 @@ div.ui-loader {
         border-radius: 19px;
         background: #e5e5e5;
     }
+    .texts img {
+        width: 280px;
+    }
 }
 @media screen and (min-width:374px) {
     .contents ul li {
@@ -421,6 +430,9 @@ div.ui-loader {
         margin: 0 4px 10px 5px;
         border: 1px solid #e5e5e5;
         float: left;
+    }
+    .texts img {
+        width: 345px;
     }
 }
 
@@ -432,4 +444,55 @@ div.ui-loader {
         border: 1px solid #e5e5e5;
         float: left;
     }
+    .texts img {
+        width: 384px;
+    }
+}
+.hide {
+    max-width: 414px;
+    height: 300px;
+    padding: 20px 15px;
+    background: #fff;
+    position: absolute;
+    top:60px;
+    z-index: 1000;
+    display: none;
+}
+.title-hide {
+    background: #fff;
+    text-align: left;
+    border-bottom: 1px solid #f2f2f2;
+}
+.title-hide p {
+    font-size: 16px;
+    color: #333333;
+    margin: 0 15px 10px 15px;
+}
+.li-cont {
+    padding: 10px 15px;
+}
+.li-cont ul {
+    max-width: 414px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.li-cont ul li p{
+    width: 90px;
+    height: 22.5px;
+    margin: 5px 3px;
+    border-radius: 11.25px;
+    border: 1px solid #c2c2c2;
+    font-size: 15px;
+    text-align: center;
+    color: #c2c2c2;
+    line-height: 23px;
+}
+.act {
+    color: #44c3cc !important;
+    border: 1px solid #44c3cc !important;
+}
+.close {
+    width: 100%;
+    height: 280px
 }

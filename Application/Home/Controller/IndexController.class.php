@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
+		session('key',1);
 		//查找出要轮播的图片
 		$ad = M('ad') -> where(['status'=>2,'positions'=>'index']) -> order('sort asc') -> limit(3) -> select();
 		//查询楼盘

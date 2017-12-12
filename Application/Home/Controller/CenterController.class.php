@@ -11,11 +11,18 @@ class CenterController extends Controller {
 		}
 		$this -> user_id = $user['id'];
 		//	echo $user_id;
+		session('key',4);
 	}
     public function index(){
 
 		$info = M('users') -> where(['id'=>$this -> user_id]) -> find();
 
+		$this -> assign('info',$info);
+		$this -> display();
+	}
+
+	public function mymoney(){
+		$info = M('users') -> where(['id'=>$this -> user_id]) -> find();
 		$this -> assign('info',$info);
 		$this -> display();
 	}

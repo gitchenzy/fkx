@@ -377,7 +377,7 @@ div.ui-loader {
 .b {
     margin: 15px;
     height: 40px;
-    background: #2c8be9;
+    background: #44c3ca !important;
     border-radius: 5px;
     text-align: center;
 }

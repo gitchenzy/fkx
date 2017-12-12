@@ -51,3 +51,9 @@ input {
 .active {
     color: #44c3ca !important;
 }
+
+@media screen and (min-width:413px) {
+    .bottom-mane-heft {
+        padding: 0px 41px 5px 35px;
+    }
+}

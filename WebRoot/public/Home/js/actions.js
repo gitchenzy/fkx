@@ -4,7 +4,7 @@
                 var bg = document.getElementById('background');
                 items = {
                     wid: 400,
-                    hei: 711,
+                    hei: 680,
                     sec_1: 1000/61,
                     sec_2: 1000/35,
                     width: window.innerWidth,
@@ -14,7 +14,7 @@
                 function lok() {
                     if(items.width===414){
                         items.wid = 455;
-                        items.hei = 810;
+                        items.hei = 710;
                     }else if(items.width===375){
                         items.wid = 420;
                         items.hei = 750;

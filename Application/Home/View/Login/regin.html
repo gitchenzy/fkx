@@ -10,12 +10,11 @@
 </head>
 <body>
 <div id="container" class="bg-img">
-    <img id="background" src="/public/Home/images/bg.png" alt="">
+    <img id="background" src="/public/Home/images/backgrounds.jpeg" alt="">
 </div>
 <div class="login">
     <ul>
         <li><img src="/public/Home/images/phone.png" alt=""><input id="nick_name" type="text" placeholder="请输入姓名"></li>
-        <li><img src="/public/Home/images/phone.png" alt=""><input id="phone" type="text" placeholder="请输入手机号码"></li>
         <li><img src="/public/Home/images/lock.png" alt=""><input id="pwd" type="password" placeholder="请输入密码"><img id="show" width="24px" height="24px" src="/public/Home/images/open.png" alt=""></li>
         <li><img src="/public/Home/images/lock.png" alt=""><input id="repwd" type="password" placeholder="请再次输入密码"><img id="hide" src="/public/Home/images/close.png" alt=""></li>
     </ul>
@@ -57,10 +56,7 @@
         var pwd = $('#pwd').val();
         var repwd = $('#repwd').val();
         //判断手机号码是否已经注册过了
-        if(!phone || !pwd){
-            alert('手机号码或者密码不能为空');
-            return false;
-        }
+        
         if(pwd.length < 6 ){
             alert('密码长度必须大于6位数');
             return false;

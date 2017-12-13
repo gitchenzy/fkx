@@ -12,43 +12,26 @@
             <img src="/public/Home/images/down.png" alt="">
         </div>
         <div class="top-container-right">
-            <input type="text" placeholder="请输入楼盘名／地名／开发商">
-            <img src="/public/Home/images/search.png" alt="">
+            <form action="{$url.sh}" method="get" id="form">
+            <input type="text" name="sh" value="{$Think.get.sh}" placeholder="请输入楼盘名／地名">
+            <img class="search" src="/public/Home/images/search.png" alt="">
+            </form>
         </div>
     </div>
     <div class="hide">
+        <volist name="city" id="cy">
         <div class="title-hide">
-            <p>厦门</p>
+            <p>{$cy.city_name}</p>
         </div>
         <div class="li-cont">
             <ul>
-                <li><p class="act">全部</p></li>
-                <li><p>海沧</p></li>
-                <li><p>湖里</p></li>
-                <li><p>集美</p></li>
-                <li><p>思明</p></li>
-                <li><p>翔安</p></li>
-                <li><p>同安</p></li>
-                <li><p>旅居地产</p></li>
-                <li><p>其他</p></li>
+                <a href="{$url.cy}"><li><p <?php if(!$_GET['cy']){echo 'class="act"';} ?> >全部</p></li></a>
+                <volist name="cy.son" id="so">
+                <a href="{$url.cy}&cy={$so.id}"><li><p <?php if($so['id'] ==$_GET['cy']){echo 'class="act"';} ?> >{$so.city_name}</p></li></a>
+                </volist>
             </ul>
         </div>
-        <div class="title-hide">
-            <p>漳州</p>
-        </div>
-        <div class="li-cont">
-            <ul>
-                <li><p class="act">全部</p></li>
-                <li><p>漳州开发区</p></li>
-                <li><p>台商投资区</p></li>
-                <li><p>长泰</p></li>
-                <li><p>龙文</p></li>
-                <li><p>芗城</p></li>
-                <li><p>东山</p></li>
-                <li><p>旅居地产</p></li>
-                <li><p>漳浦</p></li>
-            </ul>
-        </div>
+        </volist>
         <div class="close"></div>
     </div>
     <div class="text-container" id="select">
@@ -61,26 +44,30 @@
         <div class="btn-container" id="sccc">
 
                     <ul>
+                       <li <?php if(!$_GET['zj']){echo 'class="act"';} ?> > <a href="{$url.zj}">全部</a></li>
                         <volist name="jiage" id="jg">
-                            <li><a href="">{$jg.jiage_name}</a></li>
+                            <li <?php if($jg['id'] ==$_GET['zj']){echo 'class="act"';} ?> ><a href="{$url.zj}&zj={$jg.id}">{$jg.jiage_name}</a></li>
                         </volist>
 
                     </ul>
 
                     <ul>
+                        <li <?php if(!$_GET['hx']){echo 'class="act"';} ?> > <a href="{$url.hx}">全部</a></li>
                         <volist name="huxing" id="hx">
-                            <li><a href="">{$hx.huxing_name}</a></li>
+                            <li <?php if($hx['id'] ==$_GET['hx']){echo 'class="act"';} ?> ><a href="{$url.hx}&hx={$hx.id}">{$hx.huxing_name}</a></li>
                         </volist>
                     </ul>
                     <ul>
+                        <li <?php if(!$_GET['zx']){echo 'class="act"';} ?> > <a href="{$url.zx}">全部</a></li>
                         <volist name="zxiu" id="zx">
-                            <li><a href="">{$zx.zxiu_name}</a></li>
+                            <li <?php if($zx['id'] ==$_GET['zx']){echo 'class="act"';} ?> ><a href="{$url.zx}&zx={$zx.id}">{$zx.zxiu_name}</a></li>
                         </volist>
     
                     </ul>
                     <ul>
+                        <li <?php if(!$_GET['ty']){echo 'class="act"';} ?> > <a href="{$url.ty}">全部</a></li>
                         <volist name="types" id="ty">
-                            <li><a href="">{$ty.type_name}</a></li>
+                            <li <?php if($ty['id'] ==$_GET['ty']){echo 'class="act"';} ?> ><a href="{$url.ty}&ty={$ty.id}">{$ty.type_name}</a></li>
                         </volist>
     
                     </ul>
@@ -153,8 +140,8 @@
        });
        //"向服务器请求数据"
        function loadMore(te) {
-
-           $.get("{:U('Lists/loadloupan')}",{ time : te} , function(data) {
+        var where = '{$pagewhere}';
+           $.get("{:U('Lists/loadloupan')}",{ time : te, where:where} , function(data) {
                if(data.status==0){
                    // $(".loadingA").add(".loadingB").add(".loadingC").hide();
                }else{
@@ -204,6 +191,9 @@
        })
        $('.close').click(function(){
            $('.hide').css('display','none')
+       })
+       $('.search').click(function(){
+           $('#form').submit();
        })
    </script>
     

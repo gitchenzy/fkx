@@ -149,7 +149,8 @@ class CustomerController extends AdminController
         $list =  M('report')-> where($where) -> order('created_at desc') ->limit($offset,$limit) -> select();
         foreach($list as &$li){
             $li['user_name'] = M('users') -> where(['id'=>$li['user_id']]) -> getField('user_name');
-            $li['loupanr_name'] = M('loupan') -> where(['id'=>$li['loupan_id']]) -> getField('title');
+            $li['user_phone'] = M('users') -> where(['id'=>$li['user_id']]) -> getField('phone');
+            $li['loupan_name'] = M('loupan') -> where(['id'=>$li['loupan_id']]) -> getField('title');
             switch($li['zhiye']){
                 case 1;
                     $li['zhiye'] = '投资';

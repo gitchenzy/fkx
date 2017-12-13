@@ -15,8 +15,8 @@
 <div class="login">
     <ul>
         <li><img src="/public/Home/images/phone.png" alt=""><input id="phone" type="text" placeholder="请输入手机号码"></li>
-        <li><img src="/public/Home/images/lock.png" alt=""><input id="pwd" type="password" placeholder="请输入密码"><img width="24px" height="24px" src="/public/Home/images/open.png" alt=""></li>
-        <li><img src="/public/Home/images/lock.png" alt=""><input id="repwd" type="password" placeholder="请再次输入密码"><img src="/public/Home/images/close.png" alt=""></li>
+        <li><img src="/public/Home/images/lock.png" alt=""><input id="pwd" type="password" placeholder="请输入密码"><img id="show" width="24px" height="24px" src="/public/Home/images/open.png" alt=""></li>
+        <li><img src="/public/Home/images/lock.png" alt=""><input id="repwd" type="password" placeholder="请再次输入密码"><img id="hide" src="/public/Home/images/close.png" alt=""></li>
     </ul>
     <div class="little">
         <input class="chick" id="chk" checked type="checkbox">
@@ -28,9 +28,26 @@
     </div>
 </div>
 <script>
-    $('.login>ul li').on('click','input',function(){
-        $(this).val('')
-    })
+        $('#show').click(function(){
+            if($(this).attr('src')==='/public/Home/images/open.png') {
+                $('#pwd').prop('type','text')
+                $(this).attr('src','/public/Home/images/close.png')
+            }else{
+                $('#pwd').prop('type','password')
+                $(this).attr('src','/public/Home/images/open.png')
+            }
+        });
+        $('#hide').click(function(){
+            if($(this).attr('src')==='/public/Home/images/open.png') {
+                $('#repwd').prop('type','password')
+                $(this).attr('src','/public/Home/images/close.png')
+            }else{
+                $('#repwd').prop('type','text')
+                $(this).attr('src','/public/Home/images/open.png')
+            }
+        })
+
+
 
     $('.sub').click(function(){
 

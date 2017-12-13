@@ -42,6 +42,7 @@
     border-bottom: 1px solid #e5e5e5;
     position: relative;
     background: #fff;
+    z-index: 100;
 }
 .text-container ul {
     width: 100%;
@@ -408,6 +409,7 @@ div.ui-loader {
     display: none;
     padding: 15px;
     position: absolute;
+    z-index: 100;
 }
 .btn-container ul {
     display: none;

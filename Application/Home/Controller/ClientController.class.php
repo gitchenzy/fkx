@@ -104,7 +104,9 @@ class ClientController extends Controller {
 	//天假报备
 	public function report_in(){
 		$data = I('post.');
-		$ing = M('report') -> where(['phone'=>$data['phone']]) ->find();
+		$where['phone'] = $data['phone'];
+		$where['status'] = ['lt',3];
+		$ing = M('report') -> where($where) ->find();
 		if($ing){
 			$this -> error('该号码已被报备，尚在审核期，暂不可报备');
 		}

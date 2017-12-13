@@ -23,5 +23,11 @@
                 <p>{$vo.address}</p>
             </div>
         </div>
+         <div class="right">
+             <a href="{:U('client/report',array('loupan_id'=>$vo['id']))}">
+                 <img src="/public/Home/images/baobei.png" alt="">
+                 <p>快速报备</p>
+             </a>
+         </div>
     </div>
     </volist>

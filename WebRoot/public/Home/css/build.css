@@ -277,6 +277,9 @@
 .color {
     color: #333333 !important;
 }
+.btn-container ul li a {
+    color: rgba(0, 0, 0, 0.3) !important;
+}
 .active {
     border-bottom: 2px solid #44c3cc;
     height: 36px;

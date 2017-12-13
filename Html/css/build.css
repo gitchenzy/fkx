@@ -415,6 +415,9 @@ div.ui-loader {
     margin: 0 10px 5px 0;
     font-size: 12px;
 }
+.btn-container ul li a {
+    color: rgba(0, 0, 0, 0.3) !important;
+}
 .btn-container ul li:child {
     font-size: 13px;
     color: #333333;

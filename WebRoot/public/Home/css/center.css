@@ -7,6 +7,16 @@ body {
     text-align: center;
     background: url(../images/beijing.png);
     background-size: 100% 200px;
+    position: relative;
+}
+.seting {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.seting img {
+    width: 21px !important;
+    height: 21px !important;
 }
 .banner img {
     width: 60px;

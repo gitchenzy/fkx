@@ -91,13 +91,13 @@
     padding: 10px 0 0 45px;
     text-align: center;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
 
 }
 .right img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     margin-left: 10px;
 }
 .right p {

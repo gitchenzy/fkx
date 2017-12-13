@@ -2,6 +2,18 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+
+	public function _initialize(){
+		$user = get_user();
+		if($user){
+			//	session('back','Client/index');
+			$this -> assign('yongjin',1);
+		}else{
+			$this -> assign('yongjin',2);
+		}
+
+	}
+
     public function index(){
 		session('key',1);
 		//查找出要轮播的图片

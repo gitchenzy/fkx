@@ -5,7 +5,7 @@
         </a>
         <div class="main-container-text">
             <p>{$vo.title}</p>
-            <p>佣金：<span>{$vo.prices}</span></p>
+            <p>佣金：<span><?php if($yongjin == 1){ ?>{$vo.prices} <?php }else{ echo '登录可见'; ?> <?php } ?></span></p>
         </div>
         <div class="main-container-bottom">
             <img src="/public/Home/images/local.png" alt="">

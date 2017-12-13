@@ -58,6 +58,7 @@ class LoginController extends Controller {
 		$info['random'] = get_string();
 		$info['password'] = get_pwd($pass, $info['random']);
 		$info['phone'] = $phone;
+		$info['user_name'] = I('nick_name');
 		$result = M('users') -> add($info);
 		if($result){
 			$this -> success('注册成功');

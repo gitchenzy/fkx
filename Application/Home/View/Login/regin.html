@@ -14,6 +14,7 @@
 </div>
 <div class="login">
     <ul>
+        <li><img src="/public/Home/images/phone.png" alt=""><input id="nick_name" type="text" placeholder="请输入姓名"></li>
         <li><img src="/public/Home/images/phone.png" alt=""><input id="phone" type="text" placeholder="请输入手机号码"></li>
         <li><img src="/public/Home/images/lock.png" alt=""><input id="pwd" type="password" placeholder="请输入密码"><img width="24px" height="24px" src="/public/Home/images/open.png" alt=""></li>
         <li><img src="/public/Home/images/lock.png" alt=""><input id="repwd" type="password" placeholder="请再次输入密码"><img src="/public/Home/images/close.png" alt=""></li>
@@ -35,6 +36,7 @@
     $('.sub').click(function(){
 
         var phone = $('#phone').val();
+        var nick_name = $('#nick_name').val();
         var pwd = $('#pwd').val();
         var repwd = $('#repwd').val();
         //判断手机号码是否已经注册过了
@@ -50,7 +52,7 @@
             alert('两次密码不一致');
             return false;
         }
-        var info = {'pwd':pwd,phone:phone,repwd:repwd}
+        var info = {'pwd':pwd,phone:phone,repwd:repwd,nick_name:nick_name}
         $.post("{:U('Login/regin_in')}",info,function(data){
             console.log(data)
             if(1 == data.status){

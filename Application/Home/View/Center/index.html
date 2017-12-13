@@ -6,7 +6,7 @@
 <block name="main">
     <div class="banner">
         <img src="{$info.pic|default='/public/Home/images/bg.png'}" alt="">
-        <h1>{$info.nick_name}</h1>
+        <h1>{$info.user_name}</h1>
         <p>{$info.phone}</p>
     </div>
     <div class="container" style="margin-bottom: 45px;">
@@ -66,6 +66,7 @@
                     <img src="/public/Home/images/arrow.png" alt="">
                 </div>
             </li>
+
             <li>
                 <div class="left">
                     <img src="/public/Home/images/about.png" alt="">
@@ -75,6 +76,8 @@
                     <img src="/public/Home/images/arrow.png" alt="">
                 </div>
             </li>
+
+            <a href="{:U('Center/kefu')}">
             <li>
                 <div class="left">
                     <img src="/public/Home/images/call.png" alt="">
@@ -84,6 +87,7 @@
                     <img src="/public/Home/images/arrow.png" alt="">
                 </div>
             </li>
+            </a>
         </ul>
 
     </div>

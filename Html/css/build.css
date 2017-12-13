@@ -159,6 +159,14 @@
     display: flex;
     position: relative;
 }
+.test ul p {
+    font-size: 13px;
+    color: #ffffff;
+    position: absolute;
+    z-index: 101;
+    bottom: 5px;
+    right: 12px;
+}
 .test ul li {
     position: absolute;
     top: 0;
@@ -353,7 +361,6 @@ div.ui-loader {
 }
 .contents ul li img {
     width: 100%;
-    height: 100px;
 }
 .contents ul li h1 {
     font-size: 14px;

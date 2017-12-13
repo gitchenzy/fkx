@@ -115,3 +115,18 @@
      color: #ffffff;
      line-height: 25px;
  }
+ @media screen and (min-width:319px){
+     .text a:last-child{
+         margin-left: 4px !important;
+     }
+ }
+ @media screen and (min-width:359px){
+     .text a{
+        margin: 0px 13% 0 10%;
+     } 
+ }
+ @media screen and (min-width:413px){
+    .text a{
+       margin: 0px 13% 0 10%;
+    } 
+}

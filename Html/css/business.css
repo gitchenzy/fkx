@@ -138,12 +138,13 @@
 .mid-text-container {
     border-bottom: 10px solid #f2f2f2;
 }
-.mid-text-container input {
+.mid-text-container textarea {
     height: 90px;
     padding: 13px;
     width: 100%;
-    color: #e5e5e5;
+    color: #ccc;
     font-size: 13px;
+    resize: none;
 }
 .mid-container-other {
     width: 100%;

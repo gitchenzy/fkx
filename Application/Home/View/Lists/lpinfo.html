@@ -117,12 +117,38 @@
 
 <script>
     (function() {
-        $('#pics>ul li').eq(0).css('display','block');
-        $('#pics ul').on('touchmove','li',function() {
-            console.log($(this).index())
-        })
+        var li = $('#pics li:eq(0)');
+        li.css('display','block');
+        var leng = $('#pics li').length;
+        $('#pics').append($('<p>1/'+leng+'</p>'))
+        $('#pics').on('touchstart','li',function (e){
+            start = e.originalEvent.changedTouches[0].pageX;
+        });
+        $('#pics').on('touchmove','li',function (e){
+            end = e.originalEvent.changedTouches[0].pageX;
+            var index = $(this).index();
+            var add = index+1;
+            var ps = add+1;
+            var reduce = index-1;
+            if(end-start<=0){
+                if(add===leng){
+                    return false;
+                }
+                $('#pics p').remove()
+                $('#pics').append($('<p>'+ps+'/'+leng+'</p>'))
+                $(this).css('display','none');
+                $('#pics li').eq(add).css('display','block')
+            }else {
+                if(reduce===-1){
+                    return false;
+                }
+                $('#pics p').remove()
+                $('#pics').append($('<p>'+index+'/'+leng+'</p>'))
+                $(this).css('display','none');
+                $('#pics li').eq(reduce).css('display','block')
+            }
+        });
     })()
-
 
     var len = $('#build').html().length;
             (function(){

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/business.css">
+        <script src="js/jquery-1.7.1.min.js"></script>
     </head>
     <body>
         <div class="top-text-container">
@@ -13,7 +14,7 @@
             <p>1323323233</p>
         </div>
         <div class="mid-text-container">
-            <input type="text" placeholder="基本客户信息（报备时填写的信息）">
+            <textarea name="" id="text" cols="30" rows="10">基本客户信息（报备时填写的信息)</textarea>
         </div>
         <div class="mid-container-other">
                 <div class="mid-container-left">
@@ -58,5 +59,14 @@
                         </div>
                     </div>
                 </div>
+            <script>
+                var n = 0;
+                $('#text').click(function(){
+                    n++;
+                    if(n===1) {
+                        $('#text').html('')
+                    }
+                })
+            </script>
     </body>
 </html>

@@ -12,7 +12,7 @@
         <div class="container">
             <ul>
                 <li><p>客户姓名</p><span>*</span><input type="text" placeholder="请输入姓名"></li>
-                <li><p>客户性别</p><span>*</span><input class="cl" type="radio" ><p>男</p><input class="cl" type="radio"><p>女</p></li>
+                <li><p>客户性别</p><span>*</span><input class="cl" id="chk-1" type="radio" ><p>男</p><input class="cl" id="chk-2" type="radio"><p>女</p></li>
                 <li><p>客户电话</p><span>*</span><input type="text" placeholder="请输入电话"></li>
                 <li><p>置业目的（选填）</p><input type="text" placeholder="请输入"></li>
                 <li><p>关注户型（选填）</p><input type="text" placeholder="请输入"></li>
@@ -35,6 +35,12 @@
                     $('#texts').html('');
                     $('#texts').css('color','#333333')
                 }
+            })
+            $('#chk-1').click(function(){
+                $('#chk-2').attr('checked',false)
+            })
+            $('#chk-2').click(function(){
+                $('#chk-1').attr('checked',false)
             })
         </script>
     </body>

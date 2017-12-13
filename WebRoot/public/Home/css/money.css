@@ -60,6 +60,13 @@ body {
     color: #c2c2c2;
     font-size: 13px;
 }
+@media screen and (min-width:319px) {
+    .left input{
+        width: 180px !important;
+        color: #c2c2c2;
+        font-size: 12px !important;
+    }
+}
 .right {
     width: 87px;
     height: 27px;

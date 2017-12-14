@@ -71,10 +71,6 @@
                         </volist>
     
                     </ul>
-            <div id="close">
-                <div class="close-1"></div>
-                <div class="close-2"></div>
-            </div>
         </div>
 
     </div>
@@ -159,11 +155,18 @@
                }
            });
        }
+       var n = 0;
        $('#up').on('click','li',function () {
+           n++;
         var indexs = $(this).index();
-        $('#sccc').css('display','block');
+        if(n%2===1){
+            $('#sccc').css('display','block');
         $('#sccc ul').css('display','none');
         $('#sccc ul').eq(indexs).css('display','block')
+        }else {
+            $('#sccc').css('display','none');
+        }
+
     })
     $('#sccc ul').on('click','li',function(){
         $('#sccc>ul li').removeClass('act')

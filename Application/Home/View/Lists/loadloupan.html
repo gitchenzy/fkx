@@ -16,7 +16,7 @@
                     <p>佣金</p>
                 </div>
                 <div class="childs-2">
-                    <p>{$vo.prices}</p>
+                    <p><?php if($yongjin == 1){ ?>{$vo.prices} <?php }else{ echo '登录可见'; ?> <?php } ?></p>
                 </div>
             </div>
             <div class="last-child">

@@ -26,6 +26,17 @@ class CenterController extends Controller {
 		$this -> assign('info',$info);
 		$this -> display();
 	}
+	public function editinfo(){
+		$info = M('users') -> where(['id'=>$this -> user_id]) -> find();
+
+		$this -> assign('info',$info);
+		$this -> display();
+	}
+
+	public function logout() {
+		session_destroy();
+		redirect("/index.php/index/index");
+	}
 
 
 }

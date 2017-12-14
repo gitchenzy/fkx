@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+    <link rel="stylesheet" href="/public/Home/css/common.css">
+    <link rel="stylesheet" href="/public/Home/css/seting.css">
+    <script src="/public/Home/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<div class="head">
+    <p>头像</p>
+    <img style="border-radius: 30px;" src="{$info.pic|default='/public/Home/images/bg.png'}" alt="">
+    <div style="top:24px" class="arrow">
+        <img src="/public/Home/images/arrow.png" alt="">
+    </div>
+</div>
+<div style="border-bottom:10px solid #e5e5e5">
+    <div style="height:45px;border:none" class="head">
+        <p style="line-height:45px">用户名</p>
+        <div class="arrow">
+            <img src="/public/Home/images/arrow.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div style="height:45px" class="head">
+    <p style="line-height:45px">银行卡绑定</p>
+    <div class="arrow">
+        <img src="/public/Home/images/arrow.png" alt="">
+    </div>
+</div>
+<div style="height:45px" class="head">
+    <p style="line-height:45px">修改登录密码</p>
+    <div class="arrow">
+        <img src="/public/Home/images/arrow.png" alt="">
+    </div>
+</div>
+<div class="bottom">
+    <a href="{:U('Center/logout')}">退出登录</a>
+</div>
+</body>
+</html>

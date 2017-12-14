@@ -1,0 +1,61 @@
+.head {
+    margin: 0 15px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    height: 57px;
+    position: relative;
+}
+.head p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 55px;
+}
+.head img{
+    width: 50px;
+    height: 50px;
+    margin: 4px 30px 0 0;
+}
+.arrow {
+    position: absolute !important;
+    top: 17px;
+    right: 5px;
+    
+}
+.arrow img {
+    width: 13px;
+    height: 11px;
+    margin: 0 !important;
+}
+.bottom {
+    margin: 70px 15px 0 15px;
+    height: 40px;
+    background: #44c3cc;
+    border-radius: 5px;
+    text-align: center;
+}
+.bottom a {
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 40px;
+}
+
+
+.rule {
+    padding: 15px;
+}
+.rule h1 {
+    font-size: 16px;
+    color: #333333;
+    margin-top: 10px;
+}
+.rule h2 {
+    font-size: 14px;
+    color: #333333;
+    line-height: 24px;
+    font-weight: normal;
+}
+.rule p {
+    font-size: 12px;
+    color: #666666;
+}

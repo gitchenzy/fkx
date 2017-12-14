@@ -5,11 +5,15 @@
 
 <block name="main">
     <div class="banner">
-        <img src="{$info.pic|default='/public/Home/images/bg.png'}" alt="">
+        <a href="{:U('Center/editinfo')}">
+            <img src="{$info.pic|default='/public/Home/images/bg.png'}" alt="">
+        </a>
         <h1>{$info.user_name}</h1>
         <p>{$info.phone}</p>
         <div class="seting">
+            <a href="{:U('Center/editinfo')}">
                 <img src="/public/Home/images/seting.png" alt="">
+                </a>
             </div>
     </div>
     <div class="container" style="margin-bottom: 45px;">
@@ -60,6 +64,7 @@
             </li>
         </ul>
         <ul>
+            <a href="{:U('Center/pingtai')}">
             <li>
                 <div class="left">
                     <img src="/public/Home/images/lows.png" alt="">
@@ -69,7 +74,8 @@
                     <img src="/public/Home/images/arrow.png" alt="">
                 </div>
             </li>
-
+            </a>
+            <a href="{:U('Center/xy')}">
             <li>
                 <div class="left">
                     <img src="/public/Home/images/about.png" alt="">
@@ -79,7 +85,7 @@
                     <img src="/public/Home/images/arrow.png" alt="">
                 </div>
             </li>
-
+            </a>
             <a href="{:U('Center/kefu')}">
             <li>
                 <div class="left">

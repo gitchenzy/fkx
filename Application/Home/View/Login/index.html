@@ -49,7 +49,7 @@
         $.post("{:U('Login/login_in')}",info,function(data){
             console.log(data)
             if(1 == data.status){
-               
+
                 location.href = "{:U('Index/index')}";
             }else{
                 alert(data.info)

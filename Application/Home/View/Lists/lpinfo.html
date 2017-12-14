@@ -11,6 +11,16 @@
     <!--<script src="/public/Home/js/jquery-mobile.js"></script>-->
 </head>
 <body>
+    <style>
+        .big {
+            position: fixed;
+            top: 30px;
+            left: 0;
+        }
+        .plus {
+            width: 100%;
+        }
+        </style>
 <div class="test">
     <ul id="pics">
         <volist name="luobo" id="lb">
@@ -92,7 +102,7 @@
     </div>
 </div>
 <div class="contents">
-    <ul>
+    <ul id="conts">
         <volist name="huxing" id="hx">
         <li><img src="{$hx.pic}" alt=""><!--p>两室一厅一位</p><p>约230平</p--></li>
         </volist>
@@ -116,6 +126,9 @@
 </body>
 
 <script>
+
+
+
     (function() {
         var li = $('#pics li:eq(0)');
         li.css('display','block');
@@ -149,7 +162,6 @@
             }
         });
     })()
-
     var len = $('#build').html().length;
             (function(){
                 if(len>=6){
@@ -158,6 +170,22 @@
             })();
 
     var wid = $(window).width();
+    var n = 0;
+    $('#conts li').on('click','img',function() {
+        n++;
+        console.log(12)
+        if(n%2===1){
+            $(this).addClass('big','plus');
+            
+            
+        }else {
+            $(this).removeClass('big','plus');
+            
+        }
+
+    });
+
+
     (function(){
         $('.test ul').width(wid);
         $('.test>ul>li img').width(wid)

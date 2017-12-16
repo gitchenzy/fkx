@@ -1,0 +1,114 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+        <link rel="stylesheet" href="css/common.css">
+        <script src="js/jquery-1.7.1.min.js"></script>       
+    </head>
+<body>
+    <style>
+        .selects {
+            padding: 0 15px;
+            background: #fff;
+            border-bottom:10px solid #f2f2f2
+        }
+        .selects ul li {
+            border-bottom: 1px solid #f2f2f2;
+            padding: 13px 0;
+            position: relative;
+            display: flex;
+        }
+        .arrow {
+            position: absolute;
+            top: 17px;
+            right: 13px;
+        }
+        .arrow img {
+            width: 13px;
+            height: 12px;
+        }
+        .selects ul li p {
+            margin-right: 14px;
+            font-size: 14px;
+            color: #333333;
+        }
+        .selects ul li span {
+            margin-left: 10px;
+            font-size: 14px;
+            color: #c5c5c5;
+        }
+        .selects ul li input {
+            font-size: 14px;
+            width: 70%;
+            margin-left: 10px;
+            color: #c5c5c5;
+        }
+        .selects ul li a {
+            position: absolute;
+            right: 5px;
+            font-size: 14px;
+            color: #44c3cc;
+        }
+        .xieyi {
+            display: flex;
+        }
+        .xieyi a {
+            font-size: 12px;
+            color: #c5c5c5;
+            margin: 5px;
+        }
+        .chick {
+            display: none;
+        }
+        .chick+label {
+            width: 15px;
+            height: 15px;
+            background: #44c3cc;
+            border-radius: 7.5px;
+            margin-top: 5px;
+            position: relative;
+        }
+        .chick:checked + label:after {
+            content: '\2713';
+            color: white;
+            font-size: 12px;
+            position: absolute;
+            left: 2.5px;
+            width: 100%;
+        }
+        .btn {
+            height: 40px;
+            margin: 30px 15px 0 15px;
+            background: #44c3cc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .btn a {
+            font-size: 17px;
+            color: #fff;
+            line-height: 40px;
+        }
+    </style>
+    <div class="selects">
+        <ul>
+            <a href="banklist.html"><li><p>银行卡</p><span>中国建设银行</span></li><div class="arrow"><img src="images/arrow.png" alt=""></div></a>
+            <li><p>银行卡</p><input type="text" placeholder="请输入银行卡号"></li>
+            <li><p>姓</p><p>名</p><input type="text" placeholder="请输入您的姓名"></li>
+            <li style="border:none"><p>身份证</p><input type="text" placeholder="请输入身份证号码"></li>
+        </ul>
+    </div>
+    <div style="border:none" class="selects">
+        <ul>
+            <li><p>手机号</p><input type="text" placeholder="请输入手机号"></li>
+            <li><p>验证码</p><input type="text" placeholder="请输入6位验证码"><a href="">获取验证码</a></li>
+        </ul>
+        <div class="xieyi">
+            <input class="chick" id="check" type="checkbox"><label for="check"></label><a href="">同意《房客行服务协议》</a>
+        </div>
+    </div>
+    <div class="btn">
+        <a href="">确认添加</a>
+    </div>
+</body>
+</html>

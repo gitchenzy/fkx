@@ -1,40 +1,34 @@
 <?php
-//项目状态
-function rostatus($type) {
-    $list = array(
-        '1' => '跟进中' ,
-        '2' => '成交' ,
-        '3' => '失效' ,
-    );
-    return $list[$type];
-}
-function get_string() {
-    Vendor("Wifisoft.Strings");
-    return new Strings;
-}
-function get_pwd($pwd,$rad){
-    return md5(md5($pwd).$rad);
-}
+/*
+ * 此文件用于验证短信服务API接口，供开发时参考
+ * 执行验证前请确保文件为utf-8编码，并替换相应参数为您自己的信息，并取消相关调用的注释
+ * 建议验证前先执行Test.php验证PHP环境
+ *
+ * 2017/11/30
+ */
 
-function get_user () {
-    $user = session("user");
-    if (empty($user)){
-        return false;
-    }
-    return $user;
-}
-function send_sms($code,$phone){
+namespace Aliyun\DySDKLite\Sms;
+
+require_once "../SignatureHelper.php";
+
+use Aliyun\DySDKLite\SignatureHelper;
+
+
+/**
+ * 发送短信
+ */
+function sendSms() {
 
     $params = array ();
+
     // *** 需用户填写部分 ***
-    Vendor('sand_sms.SignatureHelper');
 
     // fixme 必填: 请参阅 https://ak-console.aliyun.com/ 取得您的AK信息
     $accessKeyId = "LTAIG43B4dtlqQhQ";
     $accessKeySecret = "cY9NZtoN8Cw3GqkQobViudNED3Gsnu";
 
     // fixme 必填: 短信接收号码
-    $params["PhoneNumbers"] = "{$phone}";
+    $params["PhoneNumbers"] = "15060880529";
 
     // fixme 必填: 短信签名，应严格按"签名名称"填写，请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/sign
     $params["SignName"] = "房客行";
@@ -44,7 +38,7 @@ function send_sms($code,$phone){
 
     // fixme 可选: 设置模板参数, 假如模板中存在变量需要替换则为必填项
     $params['TemplateParam'] = Array (
-        "code" => $code,
+        "code" => "1234",
     );
 
     // fixme 可选: 设置发送短信流水号
@@ -74,11 +68,12 @@ function send_sms($code,$phone){
         ))
     );
 
-   if($content->Code == 'OK'){
-       return true;
-    }else{
-       return  false;
-   }
-
-
+    return $content;
 }
+
+ini_set("display_errors", "on"); // 显示错误提示，仅用于测试时排查问题
+set_time_limit(0); // 防止脚本超时，仅用于测试使用，生产环境请按实际情况设置
+header("Content-Type: text/plain; charset=utf-8"); // 输出为utf-8的文本格式，仅用于测试
+
+// 验证发送短信(SendSms)接口
+print_r(sendSms());

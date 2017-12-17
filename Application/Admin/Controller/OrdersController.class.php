@@ -208,7 +208,7 @@ class OrdersController extends AdminController
         }
 
         if($search_value){
-            $where['u.nick_name'] = array('LIKE',"%$search_value%");;
+            $where['u.user_name'] = array('LIKE',"%$search_value%");;
         }
         if(!empty($type) && isset($type)){
             $where['a.status'] = $type;
@@ -222,7 +222,7 @@ class OrdersController extends AdminController
         }
         $list =  M('withdrawals')-> alias('a')
             ->join('users as u on u.id = a.user_id','left')
-            -> field('a.*,u.nick_name')
+            -> field('a.*,u.user_name')
             -> where($where)
             -> order($reorder)
             ->limit($offset,$limit)
@@ -315,7 +315,7 @@ class OrdersController extends AdminController
             }
 
             $this->assign('info',$info);
-            $this -> display();
+            $this -> display('editcash');
 
         }
 

@@ -580,20 +580,10 @@ function get_pay_no(){
 
     $time = strtotime(date('Y-m-d'));
     $res = M('user_account') -> where(['pay_time'=>['GT',$time]]) -> order('id desc') -> find();
-    $order = M('orders') -> where(['time'=>['GT',$time]]) -> order('id desc') -> find();
+    if($res){
 
-    if($res || $order){
-        if($res && !$order){
             $no = $res['pay_no'] + 1;
-        }else if(!$res && $order){
-            $no = $order['order_no'] + 1;
-        }else{
-            if($res['pay_no'] < $order['order_no']){
-                $no = $order['order_no'] + 1;
-            }else{
-                $no = $res['pay_no'] + 1;
-            }
-        }
+
     }else{
         $no = date('Ymd').'00001';
     }

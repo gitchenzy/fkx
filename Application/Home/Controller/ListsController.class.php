@@ -123,10 +123,10 @@ class ListsController extends Controller {
 		$info['tag'] = explode(';',$info['tag']);
 		//处处相应的佣金规则 跟 合作规则
 		$cooperation = M('cooperation') -> where(['loupan_id'=>$id]) ->  find();
-		$cooperation['des'] = explode(';',$cooperation['des']);
+//		$cooperation['des'] = explode(';',$cooperation['des']);
 		//佣金规则
 		$commission = M('commission') -> where(['loupan_id'=>$id]) ->  find();
-		$commission['des'] = explode(';',$commission['des']);
+//		$commission['des'] = explode(';',$commission['des']);
 		//查出轮播图
 		$luobo = M('zhuli') -> where(['loupan_id'=>$id, 'type'=>1]) ->select();
 		//   dump($luobo);

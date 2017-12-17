@@ -22,15 +22,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lpinfo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lpinfo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65578634">
-              <caret line="243" column="43" selection-start-line="243" selection-start-column="43" selection-end-line="243" selection-end-column="43" />
+            <state vertical-scroll-proportion="-7.0526314">
+              <caret line="78" column="17" selection-start-line="76" selection-start-column="3" selection-end-line="78" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListsController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ListsController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.51632047">
+              <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,11 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Home/View/Client/info.html" />
-        <option value="$PROJECT_DIR$/Html/build-info.html" />
-        <option value="$PROJECT_DIR$/Html/build.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Public/main.html" />
-        <option value="$PROJECT_DIR$/Html/css/build.css" />
         <option value="$PROJECT_DIR$/Html/css/money.css" />
         <option value="$PROJECT_DIR$/WebRoot/public/Home/css/money.css" />
         <option value="$PROJECT_DIR$/Application/Home/View/Client/index.html" />
@@ -52,7 +57,6 @@
         <option value="$PROJECT_DIR$/Application/Admin/Controller/FileController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/LoupanController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Loupan/editinfo.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/ListsController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/CustomerController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Center/kefu.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Lists/index.html" />
@@ -83,14 +87,20 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Center/mymoney.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ClientController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/CenterController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Public/header.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Orders/payout.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/OrdersController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Orders/editcash.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Common/function.php" />
         <option value="$PROJECT_DIR$/WebRoot/public/Home/js/imgset.js" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Loupan/editloupan.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Public/header.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Wen/editwen.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Wen/index.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/WenController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Loupan/addyongjin.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Loupan/addhezuo.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/ListsController.class.php" />
       </list>
     </option>
   </component>
@@ -247,6 +257,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wemall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wemall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -266,11 +298,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MAMP\htdocs\wemall\Application\Admin\Controller" />
       <recent name="D:\MAMP\htdocs\wemall\Application\Home\View\Center" />
       <recent name="D:\MAMP\htdocs\wemall\Application\Home\View\Login" />
       <recent name="D:\MAMP\htdocs\wemall\Application\Admin\View\Customer" />
       <recent name="D:\MAMP\htdocs\wemall\Application\Home\View\Lists" />
-      <recent name="D:\MAMP\htdocs\wemall\Application\Home\View\Index" />
     </key>
   </component>
   <component name="RunManager">
@@ -380,62 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ListsController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.921053">
-          <caret line="13" column="5" selection-start-line="4" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Html/seting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.342105">
-          <caret line="42" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Lists/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34421366">
-          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Html/rule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61275965">
-          <caret line="16" column="69" selection-start-line="11" selection-start-column="8" selection-end-line="16" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Org/Util/ArrayList.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Vendor/Hprose/HproseClassManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Html/firstregin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.394737">
-          <caret line="26" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Vendor/sand_sms/SignatureHelper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.086053416">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/App.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.086053416">
@@ -708,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Public/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38724035">
-          <caret line="98" column="63" selection-start-line="98" selection-start-column="57" selection-end-line="98" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Orders/payout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.631579">
@@ -756,14 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Loupan/editloupan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55934715">
-          <caret line="121" column="133" selection-start-line="121" selection-start-column="133" selection-end-line="121" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoupanController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -772,14 +732,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.631579">
+          <caret line="110" column="90" selection-start-line="110" selection-start-column="90" selection-end-line="110" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Loupan/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.394737">
+          <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="102" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Wen/editwen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.631579">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Wen/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.157895">
+          <caret line="132" column="57" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/WenController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34421366">
+          <caret line="89" column="28" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Loupan/addhezuo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17210683">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+          <folding>
+            <marker date="1513504014379" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1513504014379" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Loupan/addyongjin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.731454">
+          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="35" />
+          <folding>
+            <marker date="1513504000374" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1513504000374" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Loupan/editloupan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59198815">
+          <caret line="166" column="4" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Lists/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.25816023">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65578634">
-          <caret line="243" column="43" selection-start-line="243" selection-start-column="43" selection-end-line="243" selection-end-column="43" />
+        <state vertical-scroll-proportion="-7.0526314">
+          <caret line="78" column="17" selection-start-line="76" selection-start-column="3" selection-end-line="78" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ListsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51632047">
+          <caret line="126" column="9" selection-start-line="126" selection-start-column="9" selection-end-line="126" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

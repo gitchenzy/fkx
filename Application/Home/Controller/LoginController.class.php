@@ -46,7 +46,7 @@ class LoginController extends Controller {
 		if($res){
 			$this -> success('该手机号码已经被注册过了');
 		}else{
-			$this -> error('');
+			$this -> error('该手机号码不存在');
 		}
 	}
 	public function sand_sms(){
@@ -61,7 +61,7 @@ class LoginController extends Controller {
 		}
 		$result = send_sms($code, $phone);
 		if($result){
-			$heihei['num'] = $code;
+			$heihei['num'] = $code.$phone;
 			$heihei['sand _time'] = time() + 5*60;
 			session("code" , $heihei);
 			$this -> success('发送成功');
@@ -81,7 +81,7 @@ class LoginController extends Controller {
 		}
 		$yanz = session('code');
 		$time = time();
-		if($code !=$yanz['num']){
+		if($code.$phone !=$yanz['num']){
 			$this -> error('验证码错误');
 		}
 		if($time > $yanz['sand _time']){
@@ -89,6 +89,7 @@ class LoginController extends Controller {
 		}
 
 		$info['phone'] = $phone;
+		$info['is_del'] = 1;
 		$result = M('users') -> add($info);
 		if($result){
 			$this -> success($result);
@@ -117,6 +118,7 @@ class LoginController extends Controller {
 		$info['random']= $string->rand_string(6,1);
 		$info['password'] = get_pwd($pass, $info['random']);
 		$info['user_name'] = I('nick_name');
+		$info['is_del'] = 0;
 		$result = M('users') -> where(['id'=>$id]) ->save($info);
 		if($result){
 			$this -> success('注册成功');
@@ -124,8 +126,37 @@ class LoginController extends Controller {
 			$this -> error('注册失败');
 		}
 	}
-
-
+	//验证码登录
+	public function code_login(){
+		$this -> display();
+	}
+	//验证登录
+	public function code_in(){
+		$phone = I('phone');
+		$code = I('code');
+		$yanz = session('code');
+		$time = time();
+		if($code.$phone !=$yanz['num']){
+			$this -> error('验证码错误');
+		}
+		if($time > $yanz['sand _time']){
+			$this -> error('验证码过期');
+		}
+		$res = M('users') -> where(['phone'=>$phone,'is_del'=>0]) -> find();
+		if($res){
+			$current_user['user_name'] = $res['user_name'];
+			$current_user['phone'] = $res['phone'];
+			$current_user['id'] = $res['id'];
+			session("user" , $current_user);//写入Session 登录成功
+			//	$back = session('back');
+//				if(isset($back) && !empty($back)){
+//					$this -> redirect($back);
+//				}else{
+			$this->success('登录成功');
+		}else{
+			$this -> error('登录失败');
+		}
+	}
 
 
 }

@@ -37,4 +37,7 @@ class IndexController extends Controller {
 			$this -> error('没有更多数据！');
 		}
 	}
+	public function pingtai(){
+		$this -> display();
+	}
 }

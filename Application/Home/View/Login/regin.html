@@ -23,7 +23,7 @@
     <div class="little">
         <input class="chick" id="chk" checked type="checkbox">
         <label for="chk"></label>
-        <p>同意《 <span>房客行用户协议</span>》</p>
+        <p>同意《<a href="{:U('Index/pingtai')}"> <span>房客行用户协议</span></a>》</p>
     </div>
     <div class="btn sub">
         <a class="">点击注册</a>
@@ -77,7 +77,7 @@
             console.log(data)
             if(1 == data.status){
                 alert(data.info);
-                location.href = "{:U('Index/index')}";
+                location.href = "{:U('Login/index')}";
             }else{
                 alert(data.info)
             }

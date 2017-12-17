@@ -158,5 +158,51 @@ class LoginController extends Controller {
 		}
 	}
 
+	public function forgetPwd(){
+
+		$this -> display('forgetpwd');
+	}
+	public function code_change(){
+		$phone = I('phone');
+		$code = I('code');
+		$yanz = session('code');
+		$time = time();
+		if($code.$phone !=$yanz['num']){
+			$this -> error('验证码错误');
+		}
+		if($time > $yanz['sand _time']){
+			$this -> error('验证码过期');
+		}
+		$res = M('users') -> where(['phone'=>$phone,'is_del'=>0]) -> find();
+		if($res){
+			session('change_pwd', $res['id']);
+			$this->success('验证成功');
+		}else{
+			$this -> error('验证失败');
+		}
+	}
+	public function pwd_change(){
+		$this -> display();
+	}
+	public function pwd_ch(){
+		$phone = I('phone');
+		$code = I('code');
+		$yanz['id'] = session('change_pwd');
+		if(!$phone || !$code){
+			$this -> error('密码或者确认密码不能为空');
+		}
+		if($phone != $code){
+			$this -> error('两次密码不一致');
+		}
+		$string = get_string();
+		$info['random']= $string->rand_string(6,1);
+		$info['password'] = get_pwd($phone, $info['random']);
+		$result = M('users') -> where($yanz) ->save($info);
+		if($result){
+			$this -> success('修改成功');
+		}else{
+			$this -> error('修改失败');
+		}
+	}
 
 }

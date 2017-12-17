@@ -19,7 +19,7 @@ class IndexController extends Controller {
 		//查找出要轮播的图片
 		$ad = M('ad') -> where(['status'=>2,'positions'=>'index']) -> order('sort asc') -> limit(3) -> select();
 		//查询楼盘
-		$info = M('loupan') -> where(['is_hot'=>2, 'is_del' => 0,'status'=>1]) -> order('id desc') ->limit(0,5) -> select();
+		$info = M('loupan') -> where(['is_hot'=>2, 'is_del' => 0,'status'=>1]) -> order('sort desc') ->limit(0,5) -> select();
 		$this -> assign('info',$info);
 		$this -> assign('ad',$ad);
 		$this -> display();
@@ -27,7 +27,7 @@ class IndexController extends Controller {
 	public function loadloupan(){
 
 		$count = I('time');
-		$info = M('loupan') -> where(['is_hot'=>2, 'is_del' => 0,'status'=>1]) -> order('id desc') ->limit(5*$count,5) -> select();
+		$info = M('loupan') -> where(['is_hot'=>2, 'is_del' => 0,'status'=>1]) -> order('sort desc') ->limit(5*$count,5) -> select();
 
 		//   dump($project);
 		if($info){

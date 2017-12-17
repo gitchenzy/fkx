@@ -37,7 +37,7 @@ class ListsController extends Controller {
 		if(isset($data['sh']) && !empty($data['sh'])){
 			$where['title|address'] = array('like',"%{$data['sh']}%");
 		}
-		$info = M('loupan') -> where($where) -> order('id desc') ->limit(0,5) -> select();
+		$info = M('loupan') -> where($where) -> order('sort desc') ->limit(0,5) -> select();
 		$jiage = M('jiage') -> where(['is_del'=>0]) -> select();
 		$huxings = M('huxing') -> where(['is_del'=>0]) -> select();
 		$zxiu = M('zxiu') -> where(['is_del'=>0]) -> select();
@@ -100,7 +100,7 @@ class ListsController extends Controller {
 		if(isset($data['sh']) && !empty($data['sh'])){
 			$where['title|address'] = array('like',"%{$data['sh']}%");
 		}
-		$info = M('loupan') -> where($where) -> order('id desc') ->limit(5*$count,5) -> select();
+		$info = M('loupan') -> where($where) -> order('sort desc') ->limit(5*$count,5) -> select();
 		//   dump($project);
 		if($info){
 			$this -> assign('info',$info);

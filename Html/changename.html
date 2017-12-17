@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+        <link rel="stylesheet" href="css/common.css">
+        <script src="js/jquery-1.7.1.min.js"></script>       
+    </head>
+<body>
+    <style>
+        .c {
+            margin: 0 15px 30px 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f2f2f2;
+            display: flex;
+            justify-content: space-between;
+        }
+        .c p {
+            font-size: 14px;
+            color: #333333;
+        }
+        .c input {
+            width: 80%;
+            font-size: 14px;
+            color: #333333;
+            text-align: right;
+
+        }
+        .btn {
+            margin: 0 15px;
+            height: 40px;
+            border-radius: 20px;
+            background: #44c3cc;
+            text-align: center;
+        }
+        .btn a {
+            font-size: 16px;
+            color: #fff;
+            line-height: 39px;
+        }
+    </style>
+    <div class="c">
+        <p>姓名</p>
+        <input type="text" name="" id="name" placeholder="李三">
+    </div>
+    <a href="">
+        <div class="btn">
+            <a href="">保存</a>
+        </div>
+    </a>
+<script>
+    $(document).ready(function(){
+        $('#name').focus()
+    })
+</script>
+</body>
+</html>

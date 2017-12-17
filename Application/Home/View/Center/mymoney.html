@@ -8,6 +8,20 @@
     <script src="/public/Home/js/jquery-1.7.1.min.js"></script>
 </head>
 <body>
+    <style>
+        .btn {
+            margin: 30px 15px 0 15px;
+            border-radius: 5px;
+            background: #44c3cc;
+            height: 40px;
+            text-align: center;
+        }
+        .btn a {
+            font-size: 18px;
+            color: #fff;
+            line-height: 38px;
+        }
+        </style>
 <div class="lang">
     <p>您的账户余额：</p>
     <p class="active">¥{$info.balance}</p>
@@ -30,6 +44,9 @@
 </div>
 <div class="lang">
     <input type="text" id="name" placeholder="输入持卡人姓名或账号姓名">
+</div>
+<div class="btn">
+    <a href="">确定</a>
 </div>
 <script>
     $('#img-1').click(function(){

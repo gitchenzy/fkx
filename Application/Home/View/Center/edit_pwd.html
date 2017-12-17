@@ -11,9 +11,9 @@
 <body style="background:#fff">
 <div class="bind">
     <ul id="img">
-        <li><div class="left"><img src="/public/Home/images/lock.png" alt=""><input type="text" id="y_pass" placeholder="请输入原密码"></div><div id="chek"><img width="20" height="22" src="/public/Home/images/open.png" alt=""></div></li>
-        <li><div class="left"><img src="/public/Home/images/lock.png" alt=""><input type="text" id="pass" placeholder="请输入新密码，6-16位"></div><div id="chek"><img width="20" height="22" src="/public/Home/images/open.png" alt=""></div></li>
-        <li><div class="left"><img src="/public/Home/images/lock.png" alt=""><input type="text" id="repass" placeholder="请再次输入新密码"></div><div id="chek"><img width="20" height="22" src="/public/Home/images/open.png" alt=""></div></li>
+        <li><div class="left"><img src="/public/Home/images/lock.png" alt=""><input type="text" id="y_pass" placeholder="请输入原密码"></div><div id="chek"><img id="i-1" width="20" height="22" src="/public/Home/images/open.png" alt=""></div></li>
+        <li><div class="left"><img src="/public/Home/images/lock.png" alt=""><input type="text" id="pass" placeholder="请输入新密码，6-16位"></div><div id="chek"><img id="i-2" width="20" height="22" src="/public/Home/images/open.png" alt=""></div></li>
+        <li><div class="left"><img src="/public/Home/images/lock.png" alt=""><input type="text" id="repass" placeholder="请再次输入新密码"></div><div id="chek"><img id="i-3" width="20" height="22" src="/public/Home/images/open.png" alt=""></div></li>
 
     </ul>
 </div>
@@ -21,6 +21,38 @@
     <a>确认修改</a>
 </div>
 <script>
+    $('#i-1').toggle(
+        function(){
+            $(this).attr('src','/public/Home/images/close.png')
+            $('#y_pass').prop('type','password')
+        },
+        function(){
+            $(this).attr('src','/public/Home/images/open.png')
+            $('#y_pass').prop('type','text')
+        },
+    )
+    $('#i-2').toggle(
+        function(){
+            $(this).attr('src','/public/Home/images/close.png')
+            $('#pass').prop('type','password')
+        },
+        function(){
+            $(this).attr('src','/public/Home/images/open.png')
+            $('#pass').prop('type','text')
+        },
+    )
+    $('#i-3').toggle(
+        function(){
+            $(this).attr('src','/public/Home/images/close.png')
+            $('#repass').prop('type','password')
+        },
+        function(){
+            $(this).attr('src','/public/Home/images/open.png')
+            $('#repass').prop('type','text')
+        },
+    )
+
+
     var im = $('#chek img');
     im.on('click',function(){
         console.log($(this).index())

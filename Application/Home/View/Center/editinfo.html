@@ -55,34 +55,40 @@
         </ul>
     </div>
 </div>
-<div class="head">
-    <p>头像</p>
-    <img id="pic" style="border-radius: 30px;" src="{$info.pic|default='/public/Home/images/bg.png'}" alt="">
-    <div style="top:24px" class="arrow">
-        <img src="/public/Home/images/arrow.png" alt="">
-    </div>
-</div>
-<div style="border-bottom:10px solid #e5e5e5">
-    <div style="height:45px;border:none" class="head">
-        <p style="line-height:45px">用户名</p>
-        <div class="arrow">
+<a href="{:U('Center/imgset')}">
+    <div class="head">
+        <p>头像</p>
+        <img id="pic" style="border-radius: 30px;" src="{$info.pic|default='/public/Home/images/bg.png'}" alt="">
+        <div style="top:24px" class="arrow">
             <img src="/public/Home/images/arrow.png" alt="">
         </div>
     </div>
-</div>
-
-<div style="height:45px" class="head">
-    <p style="line-height:45px">银行卡绑定</p>
-    <div class="arrow">
-        <img src="/public/Home/images/arrow.png" alt="">
+</a>
+<a href="{:U('Center/edit_name')}">
+    <div style="border-bottom:10px solid #e5e5e5">
+        <div style="height:45px;border:none" class="head">
+            <p style="line-height:45px">用户名</p>
+            <div class="arrow">
+                <img src="/public/Home/images/arrow.png" alt="">
+            </div>
+        </div>
     </div>
-</div>
+</a>
+<!--<div style="height:45px" class="head">-->
+    <!--<p style="line-height:45px">银行卡绑定</p>-->
+    <!--<div class="arrow">-->
+        <!--<img src="/public/Home/images/arrow.png" alt="">-->
+    <!--</div>-->
+<!--</div>-->
+    <a href="{:U('Center/edit_pwd')}">
 <div style="height:45px" class="head">
     <p style="line-height:45px">修改登录密码</p>
     <div class="arrow">
         <img src="/public/Home/images/arrow.png" alt="">
     </div>
 </div>
+    </a>
+
 <div class="bottom">
     <a href="{:U('Center/logout')}">退出登录</a>
 </div>

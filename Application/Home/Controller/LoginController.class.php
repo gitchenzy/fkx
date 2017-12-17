@@ -46,7 +46,7 @@ class LoginController extends Controller {
 		if($res){
 			$this -> success('该手机号码已经被注册过了');
 		}else{
-			$this -> error('该手机号码不存在');
+			$this -> error('该手机号码还没注册');
 		}
 	}
 	public function sand_sms(){

@@ -21,7 +21,21 @@
     <favorites_list name="crm" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="lpinfo.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6988131">
+              <caret line="243" column="17" selection-start-line="243" selection-start-column="17" selection-end-line="243" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -35,14 +49,12 @@
         <option value="$PROJECT_DIR$/WebRoot/public/Home/css/money.css" />
         <option value="$PROJECT_DIR$/Application/Home/View/Client/index.html" />
         <option value="$PROJECT_DIR$/WebRoot/public/Home/css/build.css" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Loupan/editloupan.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/FileController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/LoupanController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Loupan/editinfo.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/ListsController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/CustomerController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Center/kefu.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Lists/index.html" />
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Vendor/sand_sms/SignatureHelper.php" />
         <option value="$PROJECT_DIR$/Application/Home/Common/function.php" />
@@ -59,7 +71,6 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Center/edit_pwd.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Center/editinfo.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" />
-        <option value="$PROJECT_DIR$/WebRoot/public/Home/js/imgset.js" />
         <option value="$PROJECT_DIR$/WebRoot/public/Home/css/main.css" />
         <option value="$PROJECT_DIR$/Application/Home/View/Center/imgset.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Customer/report.html" />
@@ -77,6 +88,9 @@
         <option value="$PROJECT_DIR$/Application/Admin/Controller/OrdersController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Orders/editcash.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Common/function.php" />
+        <option value="$PROJECT_DIR$/WebRoot/public/Home/js/imgset.js" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Loupan/editloupan.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html" />
       </list>
     </option>
   </component>
@@ -185,6 +199,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wemall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wemall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wemall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wemall" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lists" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -253,11 +315,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1618" height="868" extended-state="1" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1618" height="868" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293011" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -318,20 +380,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Html/kefu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74183977">
-          <caret line="18" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Center/kefu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6023739">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ListsController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.921053">
@@ -343,13 +391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.342105">
           <caret line="42" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7210683">
-          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -563,14 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/public/Home/js/imgset.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5702247">
-          <caret line="104" column="42" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Center/edit_pwd.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.2908012">
@@ -712,6 +745,41 @@
         <state vertical-scroll-proportion="0.3976261">
           <caret line="271" column="39" selection-start-line="271" selection-start-column="39" selection-end-line="271" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/public/Home/js/imgset.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63342696">
+          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Loupan/editloupan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55934715">
+          <caret line="121" column="133" selection-start-line="121" selection-start-column="133" selection-end-line="121" selection-end-column="133" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/LoupanController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Lists/lpinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6988131">
+          <caret line="243" column="17" selection-start-line="243" selection-start-column="17" selection-end-line="243" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

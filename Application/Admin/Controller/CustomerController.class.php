@@ -35,7 +35,7 @@ class CustomerController extends AdminController
 
         $search_value = i('search');
         if($search_value){
-            $where['user_name|weixin'] = array('LIKE',"%$search_value%");;
+            $where['user_name|phone'] = array('LIKE',"%$search_value%");;
         }
 
         $sort = i('sort');
@@ -137,7 +137,7 @@ class CustomerController extends AdminController
         $search_key = i('search_key');
         $search_value = i('search');
         if($search_value){
-            $where['phone'] = array('LIKE',"%$search_value%");;
+            $where['nick_name|phone'] = array('LIKE',"%$search_value%");;
         }
         $sort = i('sort');
         $order = i('order');

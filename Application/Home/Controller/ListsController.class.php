@@ -37,7 +37,7 @@ class ListsController extends Controller {
 		if(isset($data['sh']) && !empty($data['sh'])){
 			$where['title|address'] = array('like',"%{$data['sh']}%");
 		}
-		$info = M('loupan') -> where($where) -> order('id desc') ->limit(0,5) -> select();
+		$info = M('loupan') -> where($where) -> order('sort desc') ->limit(0,5) -> select();
 		$jiage = M('jiage') -> where(['is_del'=>0]) -> select();
 		$huxings = M('huxing') -> where(['is_del'=>0]) -> select();
 		$zxiu = M('zxiu') -> where(['is_del'=>0]) -> select();
@@ -100,7 +100,7 @@ class ListsController extends Controller {
 		if(isset($data['sh']) && !empty($data['sh'])){
 			$where['title|address'] = array('like',"%{$data['sh']}%");
 		}
-		$info = M('loupan') -> where($where) -> order('id desc') ->limit(5*$count,5) -> select();
+		$info = M('loupan') -> where($where) -> order('sort desc') ->limit(5*$count,5) -> select();
 		//   dump($project);
 		if($info){
 			$this -> assign('info',$info);
@@ -123,10 +123,10 @@ class ListsController extends Controller {
 		$info['tag'] = explode(';',$info['tag']);
 		//处处相应的佣金规则 跟 合作规则
 		$cooperation = M('cooperation') -> where(['loupan_id'=>$id]) ->  find();
-		$cooperation['des'] = explode(';',$cooperation['des']);
+//		$cooperation['des'] = explode(';',$cooperation['des']);
 		//佣金规则
 		$commission = M('commission') -> where(['loupan_id'=>$id]) ->  find();
-		$commission['des'] = explode(';',$commission['des']);
+//		$commission['des'] = explode(';',$commission['des']);
 		//查出轮播图
 		$luobo = M('zhuli') -> where(['loupan_id'=>$id, 'type'=>1]) ->select();
 		//   dump($luobo);

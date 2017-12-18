@@ -19,6 +19,28 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-sm-2 control-label" for="phone">手机号码</label>
+                <div class="col-sm-4">
+                    <input class="form-control" disabled id="phone" name="phone" type="text" value="{$info.phone}"/>
+                </div>
+            </div>
+            <if condition="($info['type'] eq 1) ">
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="name">姓名 </label>
+                    <div class="col-sm-4">
+                        <input class="form-control" disabled id="name" name="name" type="text" value="{$info.name}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="cards">支付宝账号</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" disabled id="cards" name="cards" type="text" value="{$info.cards}"/>
+                    </div>
+                </div>
+
+                <else />
+            <div class="form-group">
                 <label class="col-sm-2 control-label" for="name">姓名</label>
                 <div class="col-sm-4">
                     <input class="form-control" disabled id="name" name="name" type="text" value="{$info.name}"/>
@@ -35,7 +57,7 @@
                 <div class="col-sm-4">
                     <input class="form-control" disabled id="address" name="address" type="text" value="{$info.address}"/>
             </div>
-
+                </if>
         </fieldset>
     </form>
 

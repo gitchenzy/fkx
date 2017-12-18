@@ -74,9 +74,10 @@
         <a  style="color:#000;" href="{:U('Lists/detail', array('type'=>1, pid=>$commission['id']))}">详情></a></span>
 </div>
 <div class="content">
-    <volist name="commission.des" id="c">
-        {$c}<br>
-    </volist>
+    <!--<volist name="commission.des" id="c">-->
+        <!--{$c}<br>-->
+    <!--</volist>-->
+    {$commission.des|htmlspecialchars_decode}
 </div>
 <?php } ?>
 
@@ -90,9 +91,10 @@
         <a style="color:#000;" href="{:U('Lists/detail', array('type'=>2, pid=>$cooperation['id']))}">详情></a></span>
 </div>
 <div class="content">
-    <volist name="cooperation.des" id="s">
-        {$s}<br>
-    </volist>
+    <!--<volist name="cooperation.des" id="s">-->
+    <!--{$s}<br>-->
+<!--</volist>-->
+    {$cooperation.des|htmlspecialchars_decode}
 </div>
 <?php } ?>
 <div class="lang">
@@ -240,6 +242,7 @@
 
 
 </script>
-<script type="text/javascript">ShowMap("map",{city:'{$info.city}',addr:'{$info.address}',title:'{$info.address}',lawfirm:'',tel:'',mapx:'',pic:'',ismove:'0',piobj:'nxp'});</script>
+<!--<script type="text/javascript">ShowMap("map",{city:'{$info.city}',addr:'{$info.address}',title:'{$info.address}',lawfirm:'',tel:'',mapx:'',pic:'',ismove:'0',piobj:'nxp'});</script>-->
+<script type="text/javascript">ShowMap("map",{title:'{$info.title}',mapx:'{$info.jingwei}',ismove:'0',piobj:'nxp'});</script>
 
 </html>

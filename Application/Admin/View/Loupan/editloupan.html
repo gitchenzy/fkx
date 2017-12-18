@@ -76,12 +76,16 @@
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label" for="created_at">创建时间</label>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <input class="form-control" id="created_at" name="created_at"  value="{$info.created_at}" type="text" />
                 </div>
-                <label for="add_at"  class="col-sm-2 control-label">上市时间</label>
-                <div class="col-sm-3">
+                <label for="add_at"  class="col-sm-1 control-label">上市时间</label>
+                <div class="col-sm-2">
                     <input class="form-control" id="add_at" name="add_at"  value="{$info.add_at}" type="text" />
+                </div>
+                <label for="sort"  class="col-sm-1 control-label">排序</label>
+                <div class="col-sm-2">
+                    <input class="form-control" id="sort" name="sort"  value="{$info.sort}" type="text" />
                 </div>
             </div>
 
@@ -114,8 +118,12 @@
 
             <div class="form-group">
                 <label  class="col-sm-2 control-label">标签</label>
-                <div class="col-sm-9">
+                <div class="col-sm-4">
                     <input  class="form-control" placeholder="多个标签用英文分号隔开;" type="text" id="tag" name="tag" value="{$info.tag}" />
+                </div>
+                <label for="jingwei"  class="col-sm-2 control-label">经纬度</label>
+                <div class="col-sm-3">
+                    <input  class="form-control" placeholder="用英文分号隔开;" type="text" id="jingwei" name="jingwei" value="{$info.jingwei}" />
                 </div>
             </div>
 

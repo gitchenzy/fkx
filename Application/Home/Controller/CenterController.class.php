@@ -116,4 +116,38 @@ class CenterController extends Controller {
 			$this -> error('上传失败！');
 		}
 	}
+
+	//添加提现记录
+	public function addout(){
+
+		$w_time = session('w_time');
+
+		$balance['time'] = time();
+		if($w_time && $balance['time'] < $w_time+5*60*60){
+			$this -> error('请等待管理员的审核！');
+		}
+
+		$type = I('type');
+		if($type == 1){
+			$balance['amount'] = I('yue');
+		}else{
+			$yue = M('users') -> where(['id'=> $this -> user_id]) -> getfield('balance');
+			$balance['amount'] = floor($yue);
+		}
+		$balance['address'] =  I('address');
+		$balance['type'] =  I('types');
+		$balance['name'] =  I('name');
+		$balance['cards'] =  I('cards');
+		$balance['phone'] =  I('phone');
+		$balance['time'] =  time();
+		$balance['user_id'] = $this -> user_id;
+		$res = M('withdrawals') -> add($balance);
+		if($res){
+			session('w_time',time());
+			$this -> success('申请成功！');
+		}else{
+			$this -> error('申请失败，请重新申请！');
+		}
+
+	}
 }

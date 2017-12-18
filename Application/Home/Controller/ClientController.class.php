@@ -112,6 +112,7 @@ class ClientController extends Controller {
 		}
 		$data['user_id'] = $this -> user_id;
 		$data['status'] = 1;
+		$data['created_at'] = time();
 		$info = M('report') -> add($data);
 		if($info){
 			$this -> success('报备成功');

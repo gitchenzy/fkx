@@ -2,7 +2,7 @@
 <block name="body">
     <div class="ibox float-e-margins">
         <div class="ibox-title">
-            <h5>会员提现申请</h5>
+            <h5>项目类型</h5>
             <div class="ibox-tools" style="display:none;">
                 <a class="collapse-link">
                     <i class="fa fa-chevron-up"></i>
@@ -26,39 +26,18 @@
                 <div class="col-sm-12">
                     <div id="toolbar">
 
-                           <!-- <a class="btn btn-success" data-toggle="modal" data-target="#addCustomer" data-remote="/admin/Customer/addCustomer">
-                                新增1
-                            </a>-->
-                            <!--<button id="addform" class="btn btn-success">-->
-                                <!--新增-->
-                            <!--</button>-->
+                        <a class="btn btn-success" data-toggle="modal" data-target="#addCustomer" data-remote="{:U('Wen/addWen')}" >
+                            新增
+                        </a>
 
+                        <button id="edit" class="btn btn-primary" disabled>
+                            编辑
+                        </button>
 
+                        <button id="remove" class="btn btn-danger" disabled>
+                            <i class="glyphicon glyphicon-remove"></i> 删除
+                        </button>
 
-                            <button id="edit" class="btn btn-primary" disabled>
-                                处理提现
-                            </button>
-
-
-                            <!--<button id="remove" class="btn btn-danger" disabled>-->
-                                <!--<i class="glyphicon glyphicon-remove"></i> 删除-->
-                            <!--</button>-->
-                        <select id="type" class="form-control select-huge">
-                            <option value="0">处理状态</option>
-                            <option value="1">未处理</option>
-                            <option value="2">已处理</option>
-                        </select>
-
-                        <div class="">
-                           <label class="control-label">申请时间：</label>
-
-                            <input class="form-control input-huge" id="timea" name="timea" value="" type="text" placeholder="起始时间"> -
-                            <input class="form-control input-huge" id="timeb" name="timeb" value="" type="text" placeholder="结束时间">
-
-                            <button id="searchButton" class="btn btn-success">
-                                搜索
-                            </button>
-                        </div>
                     </div>
                     <table id="table"
                            data-toolbar="#toolbar"
@@ -72,15 +51,16 @@
                            data-sort-name="id"
                            data-detail-formatter="detailFormatter"
                            data-click-select = true
-                           data-order="desc"
+                           data-order="asc"
                            data-page-size = "10"
                            data-page-number = "1"
                            data-page-list="[10,20,50,100,ALL]"
                            data-show-footer="false"
                            data-side-pagination="server"
-                           data-url="{:U('Orders/loadPayout')}"
+                           data-url="{:U('Wen/loadWen')}"
                            data-response-handler="responseHandler">
                     </table>
+
                 </div>
             </div>
         </div>
@@ -96,15 +76,13 @@
     </div>
 </block>
 <block name="script">
+    <script type="text/javascript" src='__PUBLIC__/Static/ue/ueditor.config.js'></script>
+    <script type="text/javascript" src='__PUBLIC__/Static/ue/ueditor.all.min.js'></script>
     <script type="text/javascript">
         var $table = $('#table'), $edit=$('#edit');$remove = $('#remove'), selections = [];
-        var $add = $('#addform');
-        laydate({elem: '#timea', format: 'YYYY-MM-DD hh:mm:ss',event: 'focus'});
-        laydate({elem: '#timeb', format: 'YYYY-MM-DD hh:mm:ss', event: 'focus'});
 
         function initTable() {
             $table.bootstrapTable({
-                formatSearch:function(){return '请输入会员昵称'},
                 height: getHeight(),
                 clickToSelect:true,
                 formatLoadingMessage:function(){
@@ -123,12 +101,8 @@
                         {checkbox: true, align: 'center', valign: 'middle'},
                         //{field: 'Sort',title: '排序', align: 'center', valign: 'middle', sortable: true,},
                         {field: 'id',title: 'id', align: 'center'},
-                        {field: 'user_name',title: '会员名称', align: 'center'},
-                        {field: 'name',title: '名字', align: 'center'},
-                        {field: 'amount', title: '申请金额', align: 'center'},
-                        {field: 'status', title: '处理状态', align: 'center', halign:'center'},
-                        {field: 'node', title: '备注', align: 'center'},
-                        {field: 'time', title: '申请时间', align: 'center'},
+                        {field: 'title',title: '标题', align: 'center'},
+
                     ]
                 ]
             });
@@ -143,7 +117,6 @@
                 if(checkLen == 1){
                     //$edit.attr("data-remote",""+getIdSelections()+'&t=' + Math.random(1000) );
                     $edit.prop('disabled',false);
-
                 }else{
                     //$edit.attr("data-remote","javascript:void(0);");
                     $edit.prop('disabled',true);
@@ -153,31 +126,19 @@
             $remove.click(function () {
                 var ids = getIdSelections();
                 var param = {ids:ids};
-                confirmDelete("/index.php/admin/Customer/delCustomer",param,$table,$remove,"id",ids);
-            });
-            $add.click(function(){
-                $("#addCustomer").modal({
-                    remote: "/index.php/admin/Customer/addCustomer"
-                    ,backdrop: 'static'
-                    ,keyboard: false
-                });
+                confirmDelete("/index.php/admin/Wen/delWen",param,$table,$remove,"id",ids);
             });
             $edit.click(function(){
                 $("#addCustomer").modal({
-                    remote: "/index.php/admin/Orders/editCash?id=" + getIdSelections()+'&t=' + Math.random(1000)
-                    ,backdrop: 'static'
-                    ,keyboard: false
+                    remote: "/index.php/admin/Wen/editWen?id=" + getIdSelections()+'&t=' + Math.random(1000)
                 });
             });
-
-
 
             $(window).resize(function () {
                 $table.bootstrapTable('resetView', {
                     height: getHeight()
                 });
             });
-
         }
 
         function getIdSelections(param) {
@@ -190,26 +151,10 @@
             $("#addCustomer").on("hidden.bs.modal", function() {
                 $(this).removeData("bs.modal");
                 $edit.prop('disabled',true);
+                $remove.prop('disabled',true);
                 $table.bootstrapTable('refresh', {silent: true});
             });
             eachSeries(getScript, initTable);
         });
-
-        $('#type').change(function(){
-            search();
-        })
-
-        $("#searchButton").on("click",function(){
-            search();
-        })
-
-
-        function search(){
-            var status = $('#type').val();
-            var timea = $('#timea').val();
-            var timeb = $('#timeb').val();
-            var str =  '/index.php/admin/Orders/loadPayout?status='+status+'&timea='+timea+'&timeb='+timeb;
-            $table.bootstrapTable('refresh', {url: str});
-        }
     </script>
 </block>

@@ -107,18 +107,13 @@ $(function(){
             if(1 == data.status){
                 alert('修改成功！');
                 setTimeout(function(){
-                    location.href= "/index.php/Center/editinfo";
+                    location.href= "/index.php/Center/index";
                 },2000)
-
             }else{
                 alert(data.info)
             }
 
         })
-
-
-
-
     });
 
 //绘制矩形canvas

@@ -64,7 +64,7 @@
         $.post("{:U('Center/edit_n')}",info,function(data){
 
             if(1 == data.status){
-                location.href = '/index.php/Center/editinfo';
+                location.href = '/index.php/Center/index';
             }else{
                 alert(data.info)
             }

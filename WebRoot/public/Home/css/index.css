@@ -167,6 +167,9 @@ div.flicking_con a.on {
     color: #de0101;
     display: inline;
 }
+.main-container-text span a {
+    color: #44c3ca !important;
+}
 .main-container-bottom {
     margin-top: 10px;
     display: flex;

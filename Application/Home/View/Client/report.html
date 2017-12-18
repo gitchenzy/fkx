@@ -36,9 +36,7 @@
 </div>
 <div class="bot">
     <p>备注信息</p>
-    <textarea id="texts" name="node"  placeholder="例：价格300-333万之间，置业目的：投资房地产，区域：思明区嘉禾路，需求点：学区房等">
-例：价格300-333万之间，置业目的：投资房地产，区域：思明区嘉禾路，需求点：学区房等
-    </textarea>
+    <textarea id="texts" name="node"  placeholder="例：价格300-333万之间，置业目的：投资房地产，区域：思明区嘉禾路，需求点：学区房等">例：价格300-333万之间，置业目的：投资房地产，区域：思明区嘉禾路，需求点：学区房等</textarea>
 </div>
 <div class="error" style="font-size:14px;text-align: center;padding: 5px;color:red;">
 
@@ -68,6 +66,11 @@
             return false;
         }
         var node = $('#texts').val();
+        var te = '例：价格300-333万之间，置业目的：投资房地产，区域：思明区嘉禾路，需求点：学区房等';
+        if(node===te) {
+            alert('请输入正确内容');
+            return false
+        }
         var zhiye = $('#zhiye').val();
         var huxing = $('#huxing').val();
         var sex = $("input[name='sex']:checked").val();

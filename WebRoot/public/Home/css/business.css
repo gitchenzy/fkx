@@ -78,7 +78,7 @@
 }
 .container-text-left {
     padding-left: 20px;
-    width: 170px;
+    width: 90%;
 }
 .container-text-left h2 {
     font-size: 15px;
@@ -103,19 +103,19 @@
 @media screen and (min-width:413px) {
     .container-text-left {
         padding-left: 20px;
-        width: 200px;
+        width: 90%;
     } 
 }
 @media screen and (min-width:374px) {
     .container-text-left {
         padding-left: 20px;
-        width: 180px;
+        width: 90%;
     }
 }
 @media screen and (min-width:319px) {
     .container-text-left {
         padding-left: 20px;
-        width: 135px !important;
+        width: 90% !important;
     }
 }
 .container-text-right p {

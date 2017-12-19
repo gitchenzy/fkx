@@ -49,9 +49,6 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.container ul li:last-child{
-    border: none;
-}
 .left{
     display: flex;
 }

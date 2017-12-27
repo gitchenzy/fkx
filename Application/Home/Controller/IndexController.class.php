@@ -17,7 +17,7 @@ class IndexController extends Controller {
     public function index(){
 		session('key',1);
 		//查找出要轮播的图片
-		$ad = M('ad') -> where(['status'=>2,'positions'=>'index']) -> order('sort asc') -> limit(3) -> select();
+		$ad = M('ad') -> where(['status'=>2,'positions'=>'index']) -> order('sort asc') -> select();
 		//查询楼盘
 		$info = M('loupan') -> where(['is_hot'=>2, 'is_del' => 0,'status'=>1]) -> order('sort desc') ->limit(0,5) -> select();
 		$this -> assign('info',$info);
@@ -39,5 +39,12 @@ class IndexController extends Controller {
 	}
 	public function pingtai(){
 		$this -> display();
+	}
+	public function news(){
+		$id = I('id');
+		$info = M('wen_zhang') -> where(['id'=>$id]) -> find();
+		$this -> assign('info',$info);
+		$this -> display();
+
 	}
 }

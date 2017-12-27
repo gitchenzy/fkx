@@ -10,7 +10,7 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label" >佣金简介</label>
                     <div class="col-sm-10">
-                        <textarea name="des" class="edit" key="{$vo.id}" style="width: 100%;" >{$vo.des}</textarea>
+                        <textarea name="des" id="edit_des" class="edit" key="{$vo.id}" style="width: 100%;" >{$vo.des}</textarea>
                     </div>
                 </div>
 
@@ -21,6 +21,11 @@
                     </div>
                     <div class="col-sm-8">
                         <button class="del" key="{$vo.id}">删除</button>
+                        <button class="edits" key="{$vo.id}">保存</button>
+                    </div>
+
+                    <div class="col-sm-8">
+
                     </div>
                 </div>
 
@@ -59,7 +64,7 @@
 </div>
 <?php } ?>
 <script type="text/javascript">
-    var ue = UE.getEditor('contents');
+    var ue = UE.getEditor('edit_des');
     var ues = UE.getEditor('dess');
     $("#submit").click(function(){
         $("#defaultForm").submit();
@@ -121,12 +126,16 @@
                 });
     });
 
-    $('.edit').blur(function(){
+    $('.edits').click(function(){
 
         var id = $(this).attr('key');
-        var name = $(this).attr('name');
-        var v = $(this). val();
-        var info = {id:id,name:name,v:v}
+//        var name = $(this).attr('name');
+//        var v = $(this). val();
+//        var des = $('#edit_des'). val();
+        var des = ue.getContent();
+        var contents = ues.getContent();
+    //    alert(contents);
+        var info = {id:id,des:des,contents:contents}
         $.post("{:U('loupan/editYongjin')}",info,function(data){
             if(data.status == 1){
                 _popup('修改成功');

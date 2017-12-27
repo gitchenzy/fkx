@@ -206,7 +206,8 @@ class LoupanController extends AdminController
 
     public function editYongjin(){
         $data = i('post.');
-        $info[$data['name']] = $data['v'];
+        $info['des'] = $data['des'];
+        $info['contents'] = $data['contents'];
         $where['id'] = $data['id'];
         $res = M('commission')-> where($where) -> save($info);
         if($res){
@@ -239,7 +240,8 @@ class LoupanController extends AdminController
 
     public function editHezuo(){
         $data = i('post.');
-        $info[$data['name']] = $data['v'];
+        $info['des'] = $data['des'];
+        $info['contents'] = $data['contents'];
         $where['id'] = $data['id'];
         $res = M('cooperation')-> where($where) -> save($info);
         if($res){

@@ -56,6 +56,8 @@ return array(
     'LOG_RECORD' => true, // 开启日志记录
     'LOG_LEVEL'  =>'EMERG,ALERT,CRIT,ERR',
     'LOG_FILE_SIZE' => 1024 * 1024 * 256 ,
+    'WEIXIN_APP_ID' => 'wxe047b7d9f8d0c470' ,
+    'WEIXIN_APP_SECRET' => 'a6f0e587d79adc657ebdd6ecf0408540' ,
 
     /*Thinkphp 字段名强制转换为小写*/
     'DB_PARAMS'    =>    array(\PDO::ATTR_CASE => \PDO::CASE_NATURAL),

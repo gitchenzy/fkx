@@ -19,11 +19,7 @@
         </p>
     </div>
     <div class="ble">
-        <ul>
-            <volist name="info.info" id="vo">
-                <li><p class="grey" >{$vo} </p></li>
-            </volist>
-        </ul>
+        {$info.contents|htmlspecialchars_decode}
     </div>
 </div>
 </body>

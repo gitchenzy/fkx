@@ -99,12 +99,12 @@ div.flicking_con a.on {
 }
 
 #btn_prev {
-    left: 100px;
+    left: 1000px;
     background: url(../images/left.png) no-repeat;
 }
 
 #btn_next {
-    right: 100px;
+    right: 1000px;
     background: url(../images/right.png) no-repeat;
 }
 .mid-container {
@@ -166,6 +166,9 @@ div.flicking_con a.on {
     font-size: 14px;
     color: #de0101;
     display: inline;
+}
+.main-container-text span a {
+    color: #44c3ca !important;
 }
 .main-container-bottom {
     margin-top: 10px;

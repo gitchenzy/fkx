@@ -99,12 +99,12 @@ div.flicking_con a.on {
 }
 
 #btn_prev {
-    left: 100px;
+    left: 1000px;
     background: url(../images/left.png) no-repeat;
 }
 
 #btn_next {
-    right: 100px;
+    right: 1000px;
     background: url(../images/right.png) no-repeat;
 }
 .mid-container {

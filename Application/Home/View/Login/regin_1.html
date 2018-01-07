@@ -78,7 +78,9 @@
                 alert('手机号或者验证码不能为空');
                 return false;
             }
-            var info = {'code':code,phone:phone}
+            var openid = '{$info.openid}';
+            var pid = '{$info.pid}';
+            var info = {'code':code,phone:phone,openid:openid,pid:pid}
             $.post("{:U('Login/next_reg')}",info,function(data){
                 console.log(data)
                 if(1 == data.status){

@@ -37,6 +37,9 @@ class LoginController extends Controller {
 	}
 	//zhuce
 	public function regin_1(){
+		$info['pid'] = I('pid');
+		$info['openid'] = I('openid');
+		$this->assign('info', $info);
 		$this -> display();
 	}
 	//手机是否存在
@@ -87,8 +90,14 @@ class LoginController extends Controller {
 		if($time > $yanz['sand _time']){
 			$this -> error('验证码过期');
 		}
-
+		$pid = I('pid');
+		$aa = I('openid');
+		if($aa && $pid){
+			$info['pid'] = $pid;
+			$info['openid'] = $aa;
+		}
 		$info['phone'] = $phone;
+		$info['created_at'] = time();
 		$info['is_del'] = 1;
 		$result = M('users') -> add($info);
 		if($result){

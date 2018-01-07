@@ -150,4 +150,12 @@ class CenterController extends Controller {
 		}
 
 	}
+	//注册分享
+	public function qrcode(){
+
+		$url = 'http://'.$_SERVER['HTTP_HOST'].'/index.php/weixin/qrcode';
+		$esult = curl_request($url);
+
+
+	}
 }

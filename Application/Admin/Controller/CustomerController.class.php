@@ -146,7 +146,7 @@ class CustomerController extends AdminController
         }else{
             $reorder = 'id asc';
         }
-        $list =  M('report')-> where($where) -> order('created_at desc') ->limit($offset,$limit) -> select();
+        $list =  M('report')-> where($where) -> order($reorder) ->limit($offset,$limit) -> select();
         foreach($list as &$li){
             $li['user_name'] = M('users') -> where(['id'=>$li['user_id']]) -> getField('user_name');
             $li['user_phone'] = M('users') -> where(['id'=>$li['user_id']]) -> getField('phone');
@@ -197,7 +197,7 @@ class CustomerController extends AdminController
             $li['created_at'] = date('Y-m-d H:i',$li['created_at']);
         }
         //dump($list);
-        $count =   M('report')-> where($where) -> order('created_at desc') -> count();
+        $count =   M('report')-> where($where) -> order($reorder) -> count();
         $list_array= array("total"=>$count,"rows"=>$list?$list:array());
         echo json_encode($list_array);
 
@@ -227,6 +227,9 @@ class CustomerController extends AdminController
             M('followup') -> add($data);
             $this->success('增加成功！');
         }else{
+            $id = I('id');
+            $res = M('followup') -> where(['report_id'=>$id]) -> select();
+            $this->assign('info', $res);
             $this-> display();
         }
     }

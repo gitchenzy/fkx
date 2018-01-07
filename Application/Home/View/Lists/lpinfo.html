@@ -71,13 +71,13 @@
         <p>佣金规则</p>
     </div>
     <span style="width: 50px;margin-top: 8px; ">
-        <a  style="color:#000;" href="{:U('Lists/detail', array('type'=>1, pid=>$commission['id']))}">详情></a></span>
+        <a  style="color:#000;" href="{:U('Lists/detail', array('type'=>1, pid=>$commission['id']))}">详情></a>
+    </span>
 </div>
 <div class="content">
-    <!--<volist name="commission.des" id="c">-->
-        <!--{$c}<br>-->
-    <!--</volist>-->
+
     {$commission.des|htmlspecialchars_decode}
+
 </div>
 <?php } ?>
 

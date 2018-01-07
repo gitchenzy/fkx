@@ -12,7 +12,11 @@
                     <input class="form-control" id="contents" name="contents" type="text" value=""/>
                 </div>
             </div>
-
+            <volist name="info" id="vo">
+                <div>
+                    {$vo.contents}
+                </div>
+            </volist>
         </fieldset>
     </form>
 </div>
